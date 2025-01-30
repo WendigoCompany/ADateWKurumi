@@ -253,8 +253,45 @@ menu_db = {
         "en": "Calibrate",
         "es": "Calibrar",
     },
+    "credits": {
+        "en": "Credits",
+        "es": "Creditos",
+    },
+    "creditsMenu": {
+        "en": [
+            "Music and SFX by:",
+            [
+                "Idea Factory",
+                " - Date A Live VN Trilogy Sountrack and a beatiful history.",
+            ],
+            [
+                "Compile Heart",
+                " - Date A Live VN Trilogy Sountrack and a beatiful history.",
+            ],
+            ["Sting", " - Date A Live VN Trilogy Sountrack and a beatiful history."],
+        ],
+        "es": [
+            "Musica y Efectos echos por:",
+            [
+                "Idea Factory",
+                " - Date A Live Trilogia VN Sountrack y una hermosa historia.",
+            ],
+            [
+                "Compile Heart",
+                " - Date A Live Trilogia VN Sountrack y una hermosa historia.",
+            ],
+            ["Sting", " - Date A Live Trilogia VN Sountrack y una hermosa historia."],
+        ],
+    },
 }
 
+
+omni_txt = [
+    {
+        "en": "My name is... (Default = Shido)",
+        "es": "Mi nombre es... (Default = Shido)",
+    },
+]
 """
 {
         "en": "",
@@ -265,11 +302,12 @@ menu_db = {
 """
 
 
-
-
 def get_txt_db(db, index):
     lang = renpy.game.preferences.language
     txt = "ERR"
     if db == "menu":
         txt = menu_db[index].get(lang)
+    elif db == "omni":
+        txt = omni_txt[index].get(lang)
+
     return txt

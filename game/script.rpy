@@ -3,12 +3,18 @@
 # Declare characters used by this game. The color argument colorizes the
 # name of the character.
 
-
+init python:
+    from db import get_txt_db
 
 # The game starts here.
 
 label start:
-    "QUE CHULO"
+    $ name = renpy.input(get_txt_db("omni",0))
+    if not name:
+        $ name = "Shido"
+    $ pl.name = name
+    
+    
     # # Show a background. This uses a placeholder by default, but you can
     # # add a file (named either "bg room.png" or "bg room.jpg") to the
     # # images directory to show it.

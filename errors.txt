@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/tl/None/common.rpym", line 495: unknown statement
-    $ old menu_traslated["areyousure?"]
-    ^
+File "game/screens.rpy", line 645: 'text_style' is not a keyword argument or valid child of the text statement.
+    text "[menu_traslated['creditsMenu'][1][0]]" text_style "{color=" + color_variable + "}[menu_traslated['creditsMenu'][1][0]]{/color}"            
+                                                           ^
 
 Ren'Py Version: Ren'Py 8.3.4.24120703
-Thu Jan 30 17:06:11 2025
+Thu Jan 30 19:28:39 2025

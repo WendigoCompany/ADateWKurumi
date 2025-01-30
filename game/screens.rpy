@@ -4,7 +4,7 @@
 
 init offset = -1
 
-
+define label_color  = '#cc0066'
 init python:
     from db import get_txt_db
     from functions import set_lang 
@@ -73,7 +73,8 @@ define menu_traslated = {
 "MouseWheelUpFun" :get_txt_db("menu", "mousewheelupfun"),
 "MouseWheelDownFun" :get_txt_db("menu", "mousewheeldownfun"),
 "Calibrate" :get_txt_db("menu", "calibrate"),
-
+"Credits" :get_txt_db("menu", "credits"),
+"creditsMenu" :get_txt_db("menu", "creditsMenu"),
 }
 
 define sync = False
@@ -340,7 +341,7 @@ screen quick_menu():
             textbutton _(menu_traslated["QSave"]) action QuickSave()
             textbutton _(menu_traslated["QLoad"]) action QuickLoad()
             textbutton _(menu_traslated["Prefs"]) action ShowMenu('preferences')
-
+            
 
 ## This code ensures that the quick_menu screen is displayed in-game, whenever
 ## the player has not explicitly hidden the interface.
@@ -393,7 +394,7 @@ screen navigation():
         textbutton _(menu_traslated["Load"]) action ShowMenu("load")
 
         textbutton _(menu_traslated["Preferences"]) action ShowMenu("preferences")
-
+    
         if _in_replay:
 
             textbutton _("End Replay") action EndReplay(confirm=True)
@@ -409,6 +410,7 @@ screen navigation():
             ## Help isn't necessary or relevant to mobile devices.
             textbutton _(menu_traslated["Help"]) action ShowMenu("help")
 
+        textbutton _(menu_traslated["Credits"]) action ShowMenu("credits")
         if renpy.variant("pc"):
 
             ## The quit button is banned on iOS and unnecessary on Android and
@@ -628,6 +630,29 @@ style return_button:
 ## There's nothing special about this screen, and hence it also serves as an
 ## example of how to make a custom screen.
 
+
+screen credits():
+
+    tag menu
+    use game_menu(_(menu_traslated["Credits"]), scroll="viewport"):
+
+        style_prefix "credits"
+
+        vbox:
+            label "[menu_traslated['creditsMenu'][0]]"
+            label ""
+            text "{color=#cc0066}[menu_traslated['creditsMenu'][1][0]]{/color}[menu_traslated['creditsMenu'][1][1]]" 
+            text "{color=#cc0066}[menu_traslated['creditsMenu'][2][0]]{/color}[menu_traslated['creditsMenu'][2][1]]" 
+            text "{color=#cc0066}[menu_traslated['creditsMenu'][3][0]]{/color}[menu_traslated['creditsMenu'][3][1]]" 
+
+
+style about_label is gui_label
+style about_label_text is gui_label_text
+style about_text is gui_text
+
+style about_label_text:
+    size gui.label_text_size
+
 screen about():
 
     tag menu
@@ -812,6 +837,9 @@ style slot_button_text:
 ## themselves.
 ##
 ## https://www.renpy.org/doc/html/screen_special.html#preferences
+
+
+
 
 screen preferences():
 
