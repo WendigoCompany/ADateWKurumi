@@ -1,0 +1,1 @@
+define ku = Character("Kurumi")

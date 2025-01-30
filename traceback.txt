@@ -1,0 +1,39 @@
+﻿I'm sorry, but an uncaught exception occurred.
+
+While running game code:
+  File "game/screens.rpy", line 11, in script
+    define menu_traslated = {
+  File "game/screens.rpy", line 11, in script
+    define menu_traslated = {
+  File "game/screens.rpy", line 27, in <module>
+    "Page" : get_txt_db("menu", "page") ,
+KeyError: 'page'
+
+-- Full Traceback ------------------------------------------------------------
+
+Full traceback:
+  File "D:\Python\renpy-8.3.4-sdk\renpy-8.3.4-sdk\renpy\bootstrap.py", line 359, in bootstrap
+    renpy.main.main()
+  File "D:\Python\renpy-8.3.4-sdk\renpy-8.3.4-sdk\renpy\main.py", line 541, in main
+    renpy.game.context().run(node)
+  File "game/screens.rpy", line 11, in script
+    define menu_traslated = {
+  File "lib/python3.9/future/utils/__init__.py", line 444, in raise_
+  File "game/screens.rpy", line 11, in script
+    define menu_traslated = {
+  File "D:\Python\renpy-8.3.4-sdk\renpy-8.3.4-sdk\renpy\ast.py", line 2241, in execute
+    self.set()
+  File "D:\Python\renpy-8.3.4-sdk\renpy-8.3.4-sdk\renpy\ast.py", line 2255, in set
+    value = renpy.python.py_eval_bytecode(self.code.bytecode)
+  File "D:\Python\renpy-8.3.4-sdk\renpy-8.3.4-sdk\renpy\python.py", line 1202, in py_eval_bytecode
+    return eval(bytecode, globals, locals)
+  File "game/screens.rpy", line 27, in <module>
+    "Page" : get_txt_db("menu", "page") ,
+  File "db.py", line 75, in get_txt_db
+    },
+KeyError: 'page'
+
+Windows-10-10.0.22621 AMD64
+Ren'Py 8.3.4.24120703
+ 
+Wed Jan 29 22:05:06 2025
