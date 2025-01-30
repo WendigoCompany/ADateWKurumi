@@ -1,39 +1,80 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
-While running game code:
-  File "game/screens.rpy", line 11, in script
-    define menu_traslated = {
-  File "game/screens.rpy", line 11, in script
-    define menu_traslated = {
-  File "game/screens.rpy", line 27, in <module>
-    "Page" : get_txt_db("menu", "page") ,
-KeyError: 'page'
+After initialization, but before game start.
+  File "game/screens.rpy", line 778, in prepare_screen
+    screen preferences():
+  File "game/screens.rpy", line 778, in prepare
+    screen preferences():
+  File "game/screens.rpy", line 782, in prepare
+    use game_menu(_(menu_traslated["Preferences"]), scroll="viewport"):
+  File "game/screens.rpy", line 782, in prepare
+    use game_menu(_(menu_traslated["Preferences"]), scroll="viewport"):
+  File "game/screens.rpy", line 784, in prepare
+    vbox:
+  File "game/screens.rpy", line 784, in prepare
+    vbox:
+  File "game/screens.rpy", line 786, in prepare
+    hbox:
+  File "game/screens.rpy", line 786, in prepare
+    hbox:
+  File "game/screens.rpy", line 789, in prepare
+    if renpy.variant("pc") or renpy.variant("web"):
+  File "game/screens.rpy", line 789, in prepare
+    if renpy.variant("pc") or renpy.variant("web"):
+  File "game/screens.rpy", line 791, in prepare
+    vbox:
+  File "game/screens.rpy", line 791, in prepare
+    vbox:
+SyntaxError: unexpected EOF while parsing (game/screens.rpy, line 792)
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
   File "D:\Python\renpy-8.3.4-sdk\renpy-8.3.4-sdk\renpy\bootstrap.py", line 359, in bootstrap
     renpy.main.main()
-  File "D:\Python\renpy-8.3.4-sdk\renpy-8.3.4-sdk\renpy\main.py", line 541, in main
-    renpy.game.context().run(node)
-  File "game/screens.rpy", line 11, in script
-    define menu_traslated = {
-  File "lib/python3.9/future/utils/__init__.py", line 444, in raise_
-  File "game/screens.rpy", line 11, in script
-    define menu_traslated = {
-  File "D:\Python\renpy-8.3.4-sdk\renpy-8.3.4-sdk\renpy\ast.py", line 2241, in execute
-    self.set()
-  File "D:\Python\renpy-8.3.4-sdk\renpy-8.3.4-sdk\renpy\ast.py", line 2255, in set
-    value = renpy.python.py_eval_bytecode(self.code.bytecode)
-  File "D:\Python\renpy-8.3.4-sdk\renpy-8.3.4-sdk\renpy\python.py", line 1202, in py_eval_bytecode
-    return eval(bytecode, globals, locals)
-  File "game/screens.rpy", line 27, in <module>
-    "Page" : get_txt_db("menu", "page") ,
-  File "db.py", line 75, in get_txt_db
-    },
-KeyError: 'page'
+  File "D:\Python\renpy-8.3.4-sdk\renpy-8.3.4-sdk\renpy\main.py", line 652, in main
+    run(restart)
+  File "D:\Python\renpy-8.3.4-sdk\renpy-8.3.4-sdk\renpy\main.py", line 94, in run
+    renpy.display.screen.prepare_screens()
+  File "D:\Python\renpy-8.3.4-sdk\renpy-8.3.4-sdk\renpy\display\screen.py", line 1024, in prepare_screens
+    s.ast.prepare_screen()
+  File "game/screens.rpy", line 778, in prepare_screen
+    screen preferences():
+  File "game/screens.rpy", line 778, in prepare
+    screen preferences():
+  File "game/screens.rpy", line 782, in prepare
+    use game_menu(_(menu_traslated["Preferences"]), scroll="viewport"):
+  File "game/screens.rpy", line 782, in prepare
+    use game_menu(_(menu_traslated["Preferences"]), scroll="viewport"):
+  File "game/screens.rpy", line 784, in prepare
+    vbox:
+  File "game/screens.rpy", line 784, in prepare
+    vbox:
+  File "game/screens.rpy", line 786, in prepare
+    hbox:
+  File "game/screens.rpy", line 786, in prepare
+    hbox:
+  File "game/screens.rpy", line 789, in prepare
+    if renpy.variant("pc") or renpy.variant("web"):
+  File "game/screens.rpy", line 789, in prepare
+    if renpy.variant("pc") or renpy.variant("web"):
+  File "game/screens.rpy", line 791, in prepare
+    vbox:
+  File "game/screens.rpy", line 791, in prepare
+    vbox:
+  File "D:\Python\renpy-8.3.4-sdk\renpy-8.3.4-sdk\renpy\py3analysis.py", line 803, in ast_eval
+    return self.ast_eval_literal(expr)[0]
+  File "D:\Python\renpy-8.3.4-sdk\renpy-8.3.4-sdk\renpy\py3analysis.py", line 785, in ast_eval_literal
+    expr = py_compile(expr, 'eval', ast_node=True)
+  File "D:\Python\renpy-8.3.4-sdk\renpy-8.3.4-sdk\renpy\python.py", line 1144, in py_compile
+    raise e
+  File "D:\Python\renpy-8.3.4-sdk\renpy-8.3.4-sdk\renpy\python.py", line 1081, in py_compile
+    raise orig_e
+  File "D:\Python\renpy-8.3.4-sdk\renpy-8.3.4-sdk\renpy\python.py", line 1073, in py_compile
+    tree = compile(source, filename, py_mode, ast.PyCF_ONLY_AST | flags, 1)
+SyntaxError: unexpected EOF while parsing (game/screens.rpy, line 792)
 
 Windows-10-10.0.22621 AMD64
 Ren'Py 8.3.4.24120703
  
-Wed Jan 29 22:05:06 2025
+Thu Jan 30 14:05:23 2025

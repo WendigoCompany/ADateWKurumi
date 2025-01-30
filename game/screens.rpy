@@ -7,7 +7,7 @@ init offset = -1
 
 init python:
     from db import get_txt_db
-
+    from functions import set_lang 
 define menu_traslated = {
 "Back" :  get_txt_db( "menu","back"),
 "History" :  get_txt_db( "menu","history"),
@@ -27,8 +27,30 @@ define menu_traslated = {
 "Page" : get_txt_db("menu", "page") ,
 "Automatic saves" : get_txt_db("menu", "automaticsaves") ,
 "Quick saves" : get_txt_db("menu", "quicksaves") ,
-"empty slot" :get_txt_db("menu", "emptyslot")
+"empty slot" :get_txt_db("menu", "emptyslot"),
+"Display" : get_txt_db("menu", "display"),
+"Window" : get_txt_db("menu", "window"),
+"Fullscreen" : get_txt_db("menu", "fullscreen"),
+"UnseenText" : get_txt_db("menu", "unseentext"),
+"AfterChoices" : get_txt_db("menu", "afterchoices"),
+"Transitions" : get_txt_db("menu", "transitions"),
+"Language" : get_txt_db("menu", "language"),
+"EN" : get_txt_db("menu", "en"),
+"ES" : get_txt_db("menu", "es"),
+"Text Speed" :  get_txt_db("menu", "textspeed"),
+"Auto-Forward Time" :  get_txt_db("menu", "autoforwardtime"),
+"Music Volume" :  get_txt_db("menu", "musicvolume"),
+"Sound Volume" :  get_txt_db("menu", "soundvolume"),
+"Voice Volume" :  get_txt_db("menu", "voicevolume"),
+"Mute All" :  get_txt_db("menu", "muteall"),
+"Test" :  get_txt_db("menu", "test"),
+"NoHisto" :  get_txt_db("menu", "nohisto"),
+"Keyboard" :  get_txt_db("menu", "keyboard"),
+"Mouse" :  get_txt_db("menu", "mouse"),
+"Gamepad" :  get_txt_db("menu", "gamepad"),
 }
+
+define sync = False
 
 
 
@@ -585,7 +607,7 @@ screen about():
     ## This use statement includes the game_menu screen inside this one. The
     ## vbox child is then included inside the viewport inside the game_menu
     ## screen.
-    use game_menu(_("About"), scroll="viewport"):
+    use game_menu(_(menu_traslated["About"]), scroll="viewport"):
 
         style_prefix "about"
 
@@ -622,16 +644,15 @@ screen save():
 
     tag menu
 
-    use file_slots(_("Save"))
+    use file_slots(_(menu_traslated["Save"]))
 
 
 screen load():
 
     tag menu
 
-    use file_slots(_("Load"))
+    use file_slots(_(menu_traslated["Load"]))
 
-# AQUI
 
 screen file_slots(title):
 
@@ -713,7 +734,8 @@ screen file_slots(title):
                     textbutton _(">") action FilePageNext()
                     key "save_page_next" action FilePageNext()
 
-                if config.has_sync:
+
+                if sync:
                     if CurrentScreenName() == "save":
                         textbutton _("Upload Sync"):
                             action UploadSync()
@@ -763,10 +785,6 @@ style slot_button_text:
 ##
 ## https://www.renpy.org/doc/html/screen_special.html#preferences
 
-
-init python:
-    from functions import set_lang 
-
 screen preferences():
 
     tag menu
@@ -782,74 +800,73 @@ screen preferences():
 
                     vbox:
                         style_prefix "radio"
-                        label _("Display")
-                        textbutton _("Window") action Preference("display", "window")
-                        textbutton _("Fullscreen") action Preference("display", "fullscreen")
+                        label _(menu_traslated["Display"])
+                        textbutton _(menu_traslated["Window"]) action Preference("display", "window")
+                        textbutton _(menu_traslated["Fullscreen"]) action Preference("display", "fullscreen")
 
                 vbox:
                     style_prefix "check"
-                    label _("Skip")
-                    textbutton _("Unseen Text") action Preference("skip", "toggle")
-                    textbutton _("After Choices") action Preference("after choices", "toggle")
-                    textbutton _("Transitions") action InvertSelected(Preference("transitions", "toggle"))
+                    label _(menu_traslated["Skip"])
+                    textbutton _(menu_traslated["UnseenText"]) action Preference("skip", "toggle")
+                    textbutton _(menu_traslated["AfterChoices"]) action Preference("after choices", "toggle")
+                    textbutton _(menu_traslated["Transitions"]) action InvertSelected(Preference("transitions", "toggle"))
 
                 vbox:
                     style_prefix "radio"
-                    label _("Display")
-                    textbutton _("English") action Function(set_lang,lang = "en")
-                    textbutton _("Español") action Function(set_lang,lang = "es")
+                    label _(menu_traslated["Language"])
+                    textbutton _(menu_traslated["EN"]) action Function(set_lang,lang = "en")
+                    textbutton _(menu_traslated["ES"]) action Function(set_lang,lang = "es")
 
                 ## Additional vboxes of type "radio_pref" or "check_pref" can be
                 ## added here, to add additional creator-defined preferences.
 
             null height (4 * gui.pref_spacing)
-
             hbox:
                 style_prefix "slider"
                 box_wrap True
 
                 vbox:
 
-                    label _("Text Speed")
+                    label _(menu_traslated["Text Speed"])
 
                     bar value Preference("text speed")
 
-                    label _("Auto-Forward Time")
+                    label _(menu_traslated["Auto-Forward Time"])
 
                     bar value Preference("auto-forward time")
 
                 vbox:
 
                     if config.has_music:
-                        label _("Music Volume")
+                        label _(menu_traslated["Music Volume"])
 
                         hbox:
                             bar value Preference("music volume")
 
                     if config.has_sound:
 
-                        label _("Sound Volume")
+                        label _(menu_traslated["Sound Volume"])
 
                         hbox:
                             bar value Preference("sound volume")
 
                             if config.sample_sound:
-                                textbutton _("Test") action Play("sound", config.sample_sound)
+                                textbutton _(menu_traslated["Test"]) action Play("sound", config.sample_sound)
 
 
                     if config.has_voice:
-                        label _("Voice Volume")
+                        label _(menu_traslated["Voice Volume"])
 
                         hbox:
                             bar value Preference("voice volume")
 
                             if config.sample_voice:
-                                textbutton _("Test") action Play("voice", config.sample_voice)
+                                textbutton _(menu_traslated["Test"]) action Play("voice", config.sample_voice)
 
                     if config.has_music or config.has_sound or config.has_voice:
                         null height gui.pref_spacing
 
-                        textbutton _("Mute All"):
+                        textbutton _(menu_traslated["Mute All"]):
                             action Preference("all mute", "toggle")
                             style "mute_all_button"
 
@@ -940,7 +957,7 @@ screen history():
     ## Avoid predicting this screen, as it can be very large.
     predict False
 
-    use game_menu(_("History"), scroll=("vpgrid" if gui.history_height else "viewport"), yinitial=1.0, spacing=gui.history_spacing):
+    use game_menu(_(menu_traslated["History"]), scroll=("vpgrid" if gui.history_height else "viewport"), yinitial=1.0, spacing=gui.history_spacing):
 
         style_prefix "history"
 
@@ -968,7 +985,7 @@ screen history():
                     substitute False
 
         if not _history_list:
-            label _("The dialogue history is empty.")
+            label _(menu_traslated["NoHisto"])
 
 
 ## This determines what tags are allowed to be displayed on the history screen.
@@ -1021,13 +1038,17 @@ style history_label_text:
 ## screens (keyboard_help, mouse_help, and gamepad_help) to display the actual
 ## help.
 
+#AQUI
+
+
+
 screen help():
 
     tag menu
 
     default device = "keyboard"
 
-    use game_menu(_("Help"), scroll="viewport"):
+    use game_menu(_(menu_traslated["Help"]), scroll="viewport"):
 
         style_prefix "help"
 
@@ -1036,11 +1057,11 @@ screen help():
 
             hbox:
 
-                textbutton _("Keyboard") action SetScreenVariable("device", "keyboard")
-                textbutton _("Mouse") action SetScreenVariable("device", "mouse")
+                textbutton _(menu_traslated["Keyboard"]) action SetScreenVariable("device", "keyboard")
+                textbutton _(menu_traslated["Mouse"]) action SetScreenVariable("device", "mouse")
 
                 if GamepadExists():
-                    textbutton _("Gamepad") action SetScreenVariable("device", "gamepad")
+                    textbutton _(menu_traslated["Gamepad"]) action SetScreenVariable("device", "gamepad")
 
             if device == "keyboard":
                 use keyboard_help

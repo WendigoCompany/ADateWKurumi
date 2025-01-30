@@ -2,37 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/gui.rpy", line 17: expected '=' not found.
-    define accent_color 
-                        ^
-
-File "game/gui.rpy", line 18: expected '=' not found.
-    define idle_color 
-                      ^
-
-File "game/gui.rpy", line 19: expected '=' not found.
-    define idle_small_color 
-                            ^
-
-File "game/gui.rpy", line 20: expected '=' not found.
-    define hover_color 
-                       ^
-
-File "game/gui.rpy", line 21: expected '=' not found.
-    define selected_color 
-                          ^
-
-File "game/gui.rpy", line 22: expected '=' not found.
-    define text_font
+File "game/screens.rpy", line 33: expected statement.
+    config.has_sync = False
                     ^
 
-File "game/gui.rpy", line 23: expected '=' not found.
-    define name_text_font
-                         ^
-
-File "game/gui.rpy", line 24: expected '=' not found.
-    define interface_text_font
-                              ^
-
 Ren'Py Version: Ren'Py 8.3.4.24120703
-Wed Jan 29 21:50:11 2025
+Thu Jan 30 13:40:21 2025

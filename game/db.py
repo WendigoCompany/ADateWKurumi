@@ -77,11 +77,101 @@ menu_db = {
         "en": "Quick Saves",
         "es": "Guardado Rápido",
     },
-        "emptyslot": {
+    "emptyslot": {
         "en": "Empty Slot",
         "es": "Slot Vacío",
     },
+    "display": {
+        "en": "Display",
+        "es": "Pantalla",
+    },
+    "window": {
+        "en": "Window",
+        "es": "Ventana",
+    },
+    "fullscreen": {
+        "en": "Fullscreen",
+        "es": "Pantalla Completa",
+    },
+    "unseentext": {
+        "en": "Unseen Text",
+        "es": "Texto no Visto",
+    },
+    "afterchoices": {
+        "en": "After Choices",
+        "es": "Despues de Elecciones",
+    },
+    "transitions": {
+        "en": "Transitions",
+        "es": "Transiciones",
+    },
+    "language": {
+        "en": "Language",
+        "es": "Idioma",
+    },
+    "en": {
+        "en": "English",
+        "es": "Inglés",
+    },
+    "es": {
+        "en": "Spanish",
+        "es": "Español",
+    },
+    "textspeed": {
+        "en": "Text Speed",
+        "es": "Velocidad Texto",
+    },
+    "autoforwardtime": {
+        "en": "Auto-Forward Time",
+        "es": "Tiempo Texto Auto",
+    },
+    "musicvolume": {
+        "en": "Music Volume",
+        "es": "Volumen Música",
+    },
+    "soundvolume": {
+        "en": "Sound Volume",
+        "es": "Volumen Sonido",
+    },
+    "voicevolume": {
+        "en": "Voice Volume",
+        "es": "Volumen Voz",
+    },
+    "muteall": {
+        "en": "Mute All",
+        "es": "Silenciar Todo",
+    },
+    "test": {
+        "en": "Test",
+        "es": "Probar",
+    },
+    "nohisto": {
+        "en": "The dialogue history is empty.",
+        "es": "El historial de dialogos esta vacío.",
+    },
+    "keyboard": {
+        "en": "Keyboard",
+        "es": "Teclado",
+    },
+    "mouse": {
+        "en": "Mouse",
+        "es": "Mouse",
+    },
+    "gamepad": {
+        "en": "Gamepad",
+        "es": "Mando",
+    },
 }
+
+"""
+{
+        "en": "",
+        "es": "",
+    },
+
+
+"""
+
 
 
 
