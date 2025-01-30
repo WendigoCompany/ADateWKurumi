@@ -161,6 +161,98 @@ menu_db = {
         "en": "Gamepad",
         "es": "Mando",
     },
+    "enterfun": {
+        "en": "Advances dialogue without selecting choices.",
+        "es": "Siguiente diálogo sin seleccionar opciones.",
+    },
+    "spacefun": {
+        "en": "Advances dialogue and activates the interface.",
+        "es": "Siguiente diálogo y activar interfaz.",
+    },
+    "arrowkeys": {
+        "en": "Arrow Keys",
+        "es": "Fechas",
+    },
+    "arrowfun": {
+        "en": "Navigate the interface.",
+        "es": "Navegar a través de la interfaz.",
+    },
+    "escapefun": {
+        "en": "Accesses the game menu.",
+        "es": "Entrar al menú del juego.",
+    },
+    "ctrlfun": {
+        "en": "Skips dialogue while held down.",
+        "es": "Saltar diálogos mientras se mantiene.",
+    },
+    "tabfun": {
+        "en": "Toggles dialogue skipping.",
+        "es": "Alternar el salteo de diálogos.",
+    },
+    "pageupfun": {
+        "en": "Rolls forward to later dialogue.",
+        "es": "Avanzar al siguiente diálogo.",
+    },
+    "pagedownfun": {
+        "en": "Rolls back to earlier dialogue.",
+        "es": "Volver al diálogo anterior.",
+    },
+    "hfun": {
+        "en": "Hides the user interface.",
+        "es": "Ocultar interfaz de usuario.",
+    },
+    "sfun": {
+        "en": "Takes a screenshot.",
+        "es": "Tomar una captura de pantalla.",
+    },
+    "togglesassistive": {
+        "en": "Toggles assistive",
+        "es": "Alternar asistente",
+    },
+    "selfvoicing": {
+        "en": "self-voicing",
+        "es": "de voz",
+    },
+    "shift+afun": {
+        "en": "Opens the accessibility menu.",
+        "es": "Abrir el menu de accecibilidad.",
+    },
+    "leftclick": {
+        "en": "Left Click",
+        "es": "Click Izquierdo",
+    },
+    "leftclickfun": {
+        "en": "Advances dialogue and activates the interface.",
+        "es": "Avanzar al siguiente diálogo y activar la interfaz",
+    },
+    "middleclick": {
+        "en": "Middle Click",
+        "es": "Click Medio",
+    },
+    "middleclickfun": {
+        "en": "Hides the user interface.",
+        "es": "Ocultar la interfaz",
+    },
+    "rightclick": {
+        "en": "Right Click",
+        "es": "Click Derecho",
+    },
+    "rightclickfun": {
+        "en": "Accesses the game menu.",
+        "es": "Entrar al menú del juego.",
+    },
+    "mousewheelupfun": {
+        "en": "Rolls forward to later dialogue.",
+        "es": "Avanzar al siguiente diálogo.",
+    },
+    "mousewheeldownfun": {
+        "en": "Rolls back to earlier dialogue.",
+        "es": "Volver al diálogo anterior.",
+    },
+    "calibrate": {
+        "en": "Calibrate",
+        "es": "Calibrar",
+    },
 }
 
 """
@@ -171,9 +263,6 @@ menu_db = {
 
 
 """
-
-
-
 
 
 

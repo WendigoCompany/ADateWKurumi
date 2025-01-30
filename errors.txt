@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/screens.rpy", line 33: expected statement.
-    config.has_sync = False
-                    ^
+File "game/tl/None/common.rpym", line 495: unknown statement
+    $ old menu_traslated["areyousure?"]
+    ^
 
 Ren'Py Version: Ren'Py 8.3.4.24120703
-Thu Jan 30 13:40:21 2025
+Thu Jan 30 17:06:11 2025

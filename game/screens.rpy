@@ -8,6 +8,7 @@ init offset = -1
 init python:
     from db import get_txt_db
     from functions import set_lang 
+    
 define menu_traslated = {
 "Back" :  get_txt_db( "menu","back"),
 "History" :  get_txt_db( "menu","history"),
@@ -48,9 +49,36 @@ define menu_traslated = {
 "Keyboard" :  get_txt_db("menu", "keyboard"),
 "Mouse" :  get_txt_db("menu", "mouse"),
 "Gamepad" :  get_txt_db("menu", "gamepad"),
+"EnterFun" :  get_txt_db("menu", "enterfun"),
+"SpaceFun" :  get_txt_db("menu", "spacefun"),
+"Arrow Keys" :  get_txt_db("menu", "arrowkeys"),
+"ArrowFun" :  get_txt_db("menu", "arrowfun"),
+"EscapeFun" :  get_txt_db("menu", "escapefun"),
+"CtrlFun" :  get_txt_db("menu", "ctrlfun"),
+"TabFun" :  get_txt_db("menu", "tabfun"),
+"PageUpFun" :  get_txt_db("menu", "pageupfun"),
+"PageDownFun" :  get_txt_db("menu", "pagedownfun"),
+"HFun" :  get_txt_db("menu", "hfun"),
+"SFun" :  get_txt_db("menu", "sfun"),
+"Toggles assistive" :  get_txt_db("menu", "togglesassistive"),
+"self-voicing" :  get_txt_db("menu", "selfvoicing"),
+
+"Shift+AFun" :get_txt_db("menu", "shift+afun"),
+"Left Click" :get_txt_db("menu", "leftclick"),
+"LeftClickFun" :get_txt_db("menu", "leftclickfun"),
+"Middle Click" :get_txt_db("menu","middleclick"),
+"MiddleClickFun" :get_txt_db("menu", "middleclickfun"),
+"Right Click" :get_txt_db("menu", "rightclick"),
+"RightClickFun" :get_txt_db("menu", "rightclickfun"),
+"MouseWheelUpFun" :get_txt_db("menu", "mousewheelupfun"),
+"MouseWheelDownFun" :get_txt_db("menu", "mousewheeldownfun"),
+"Calibrate" :get_txt_db("menu", "calibrate"),
+
 }
 
 define sync = False
+
+
 
 
 
@@ -1071,107 +1099,130 @@ screen help():
                 use gamepad_help
 
 
+
+
+
+
+
+
+
+
+
 screen keyboard_help():
 
     hbox:
         label _("Enter")
-        text _("Advances dialogue and activates the interface.")
+        text _(menu_traslated["EnterFun"])
 
     hbox:
         label _("Space")
-        text _("Advances dialogue without selecting choices.")
+        text _(menu_traslated["SpaceFun"])
 
     hbox:
-        label _("Arrow Keys")
-        text _("Navigate the interface.")
+        label _(menu_traslated["Arrow Keys"])
+        text _(menu_traslated["ArrowFun"])
 
     hbox:
         label _("Escape")
-        text _("Accesses the game menu.")
+        text _(menu_traslated["EscapeFun"])
 
     hbox:
         label _("Ctrl")
-        text _("Skips dialogue while held down.")
+        text _(menu_traslated["CtrlFun"])
 
     hbox:
         label _("Tab")
-        text _("Toggles dialogue skipping.")
+        text _(menu_traslated["TabFun"])
 
     hbox:
         label _("Page Up")
-        text _("Rolls back to earlier dialogue.")
+        text _(menu_traslated["PageUpFun"])
 
     hbox:
         label _("Page Down")
-        text _("Rolls forward to later dialogue.")
+        text _(menu_traslated["PageDownFun"])
 
     hbox:
         label "H"
-        text _("Hides the user interface.")
+        text _(menu_traslated["HFun"])
 
     hbox:
         label "S"
-        text _("Takes a screenshot.")
+        text _(menu_traslated["SFun"])
 
     hbox:
         label "V"
-        text _("Toggles assistive {a=https://www.renpy.org/l/voicing}self-voicing{/a}.")
+        text _(menu_traslated["Toggles assistive"] + "{a=https://www.renpy.org/l/voicing} " + menu_traslated["self-voicing"] + " {/a}.")
 
     hbox:
         label "Shift+A"
-        text _("Opens the accessibility menu.")
+        text _(menu_traslated["Shift+AFun"])
+
+    
+
+
+# "" :get_txt_db("menu", ""),
+# "" :get_txt_db("menu", ""),
+# "" :get_txt_db("menu", ""),
+# "" :get_txt_db("menu", ""),
+# "" :get_txt_db("menu", ""),
+# "" :get_txt_db("menu", ""),
+# "" :get_txt_db("menu", ""),
+# "" :get_txt_db("menu", ""),
+# "" :get_txt_db("menu", ""),
+
 
 
 screen mouse_help():
 
     hbox:
-        label _("Left Click")
-        text _("Advances dialogue and activates the interface.")
+        label _(menu_traslated["Left Click"])
+        text _(menu_traslated["LeftClickFun"])
 
     hbox:
-        label _("Middle Click")
-        text _("Hides the user interface.")
+        label _(menu_traslated["Middle Click"])
+        text _(menu_traslated["MiddleClickFun"])
 
     hbox:
-        label _("Right Click")
-        text _("Accesses the game menu.")
+        label _(menu_traslated["Right Click"])
+        text _(menu_traslated["RightClickFun"])
 
     hbox:
         label _("Mouse Wheel Up")
-        text _("Rolls back to earlier dialogue.")
+        text _(menu_traslated["MouseWheelUpFun"])
 
     hbox:
         label _("Mouse Wheel Down")
-        text _("Rolls forward to later dialogue.")
+        text _(menu_traslated["MouseWheelDownFun"])
 
 
 screen gamepad_help():
 
     hbox:
         label _("Right Trigger\nA/Bottom Button")
-        text _("Advances dialogue and activates the interface.")
+        text _(menu_traslated["LeftClickFun"])
 
     hbox:
         label _("Left Trigger\nLeft Shoulder")
-        text _("Rolls back to earlier dialogue.")
+        text _(menu_traslated["MouseWheelDownFun"])
 
     hbox:
         label _("Right Shoulder")
-        text _("Rolls forward to later dialogue.")
+        text _(menu_traslated["MouseWheelUpFun"])
 
     hbox:
         label _("D-Pad, Sticks")
-        text _("Navigate the interface.")
+        text _(menu_traslated["ArrowFun"])
 
     hbox:
         label _("Start, Guide, B/Right Button")
-        text _("Accesses the game menu.")
+        text _(menu_traslated["RightClickFun"])
 
     hbox:
         label _("Y/Top Button")
-        text _("Hides the user interface.")
+        text _(menu_traslated["MiddleClickFun"])
 
-    textbutton _("Calibrate") action GamepadCalibrate()
+    textbutton _(menu_traslated["Calibrate"]) action GamepadCalibrate()
 
 
 style help_button is gui_button
