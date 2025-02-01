@@ -1,51 +1,43 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/screens.rpy", line 634, in execute
-    screen credits():
-  File "game/screens.rpy", line 634, in execute
-    screen credits():
-  File "game/screens.rpy", line 637, in execute
-    use game_menu(_(menu_traslated["Credits"]), scroll="viewport"):
-  File "game/screens.rpy", line 503, in execute
-    screen game_menu(title, scroll=None, yinitial=0.0, spacing=0):
-  File "game/screens.rpy", line 503, in execute
-    screen game_menu(title, scroll=None, yinitial=0.0, spacing=0):
-  File "game/screens.rpy", line 512, in execute
-    frame:
-  File "game/screens.rpy", line 515, in execute
+  File "game/script.rpy", line 106, in script
+    $ opcion_seleccionada = renpy.call_screen("opciones_menu",opciones)
+  File "game/script.rpy", line 106, in <module>
+    $ opcion_seleccionada = renpy.call_screen("opciones_menu",opciones)
+  File "game/script.rpy", line 58, in execute
+    screen opciones_menu(options):
+  File "game/script.rpy", line 58, in execute
+    screen opciones_menu(options):
+  File "game/script.rpy", line 65, in execute
+    vbox:
+  File "game/script.rpy", line 66, in execute
+    for i, (img, txt) in enumerate(options):
+  File "game/script.rpy", line 67, in execute
+    if i // 4 == page:
+  File "game/script.rpy", line 68, in execute
+    button:
+  File "game/script.rpy", line 70, in execute
     hbox:
-  File "game/screens.rpy", line 521, in execute
-    frame:
-  File "game/screens.rpy", line 524, in execute
-    if scroll == "viewport":
-  File "game/screens.rpy", line 526, in execute
-    viewport:
-  File "game/screens.rpy", line 535, in execute
-    vbox:
-  File "game/screens.rpy", line 538, in execute
-    transclude
-  File "game/screens.rpy", line 637, in execute
-    use game_menu(_(menu_traslated["Credits"]), scroll="viewport"):
-  File "game/screens.rpy", line 641, in execute
-    vbox:
-  File "game/screens.rpy", line 643, in execute
-    text "{color=[#cc0066]}[menu_traslated['creditsMenu'][1][0]]{/color} "
-SyntaxError: unexpected EOF while parsing (<none>, line 1)
+  File "game/script.rpy", line 72, in execute
+    text txt + i
+  File "game/script.rpy", line 72, in <module>
+    text txt + i
+TypeError: can only concatenate str (not "int") to str
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "renpy/common/_layout/screen_main_menu.rpym", line 28, in script
-    python hide:
+  File "game/script.rpy", line 106, in script
+    $ opcion_seleccionada = renpy.call_screen("opciones_menu",opciones)
   File "D:\Python\renpy-8.3.4-sdk\renpy-8.3.4-sdk\renpy\ast.py", line 827, in execute
     renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
   File "D:\Python\renpy-8.3.4-sdk\renpy-8.3.4-sdk\renpy\python.py", line 1178, in py_exec_bytecode
     exec(bytecode, globals, locals)
-  File "renpy/common/_layout/screen_main_menu.rpym", line 28, in <module>
-    python hide:
-  File "renpy/common/_layout/screen_main_menu.rpym", line 35, in _execute_python_hide
-    ui.interact()
+  File "game/script.rpy", line 106, in <module>
+    $ opcion_seleccionada = renpy.call_screen("opciones_menu",opciones)
+  File "D:\Python\renpy-8.3.4-sdk\renpy-8.3.4-sdk\renpy\exports\statementexports.py", line 345, in call_screen
+    rv = renpy.ui.interact(mouse="screen", type="screen", roll_forward=roll_forward)
   File "D:\Python\renpy-8.3.4-sdk\renpy-8.3.4-sdk\renpy\ui.py", line 301, in interact
     rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
   File "D:\Python\renpy-8.3.4-sdk\renpy-8.3.4-sdk\renpy\display\core.py", line 2215, in interact
@@ -58,7 +50,6 @@ Full traceback:
     d.visit_all(callback, seen)
   File "D:\Python\renpy-8.3.4-sdk\renpy-8.3.4-sdk\renpy\display\displayable.py", line 434, in visit_all
     d.visit_all(callback, seen)
-  [Previous line repeated 1 more time]
   File "D:\Python\renpy-8.3.4-sdk\renpy-8.3.4-sdk\renpy\display\screen.py", line 480, in visit_all
     callback(self)
   File "D:\Python\renpy-8.3.4-sdk\renpy-8.3.4-sdk\renpy\display\core.py", line 2745, in <lambda>
@@ -67,57 +58,27 @@ Full traceback:
     self.update()
   File "D:\Python\renpy-8.3.4-sdk\renpy-8.3.4-sdk\renpy\display\screen.py", line 697, in update
     self.screen.function(**self.scope)
-  File "game/screens.rpy", line 634, in execute
-    screen credits():
-  File "game/screens.rpy", line 634, in execute
-    screen credits():
-  File "game/screens.rpy", line 637, in execute
-    use game_menu(_(menu_traslated["Credits"]), scroll="viewport"):
-  File "game/screens.rpy", line 503, in execute
-    screen game_menu(title, scroll=None, yinitial=0.0, spacing=0):
-  File "game/screens.rpy", line 503, in execute
-    screen game_menu(title, scroll=None, yinitial=0.0, spacing=0):
-  File "game/screens.rpy", line 512, in execute
-    frame:
-  File "game/screens.rpy", line 515, in execute
+  File "game/script.rpy", line 58, in execute
+    screen opciones_menu(options):
+  File "game/script.rpy", line 58, in execute
+    screen opciones_menu(options):
+  File "game/script.rpy", line 65, in execute
+    vbox:
+  File "game/script.rpy", line 66, in execute
+    for i, (img, txt) in enumerate(options):
+  File "game/script.rpy", line 67, in execute
+    if i // 4 == page:
+  File "game/script.rpy", line 68, in execute
+    button:
+  File "game/script.rpy", line 70, in execute
     hbox:
-  File "game/screens.rpy", line 521, in execute
-    frame:
-  File "game/screens.rpy", line 524, in execute
-    if scroll == "viewport":
-  File "game/screens.rpy", line 526, in execute
-    viewport:
-  File "game/screens.rpy", line 535, in execute
-    vbox:
-  File "game/screens.rpy", line 538, in execute
-    transclude
-  File "game/screens.rpy", line 637, in execute
-    use game_menu(_(menu_traslated["Credits"]), scroll="viewport"):
-  File "game/screens.rpy", line 641, in execute
-    vbox:
-  File "game/screens.rpy", line 643, in execute
-    text "{color=[#cc0066]}[menu_traslated['creditsMenu'][1][0]]{/color} "
-  File "D:\Python\renpy-8.3.4-sdk\renpy-8.3.4-sdk\renpy\text\text.py", line 2059, in __init__
-    self.set_text(text, scope, substitute) # type: ignore
-  File "D:\Python\renpy-8.3.4-sdk\renpy-8.3.4-sdk\renpy\text\text.py", line 2192, in set_text
-    i, did_sub = renpy.substitutions.substitute(i, scope, substitute) # type: ignore
-  File "D:\Python\renpy-8.3.4-sdk\renpy-8.3.4-sdk\renpy\substitutions.py", line 373, in substitute
-    s = interpolate(s, variables) # type: ignore
-  File "D:\Python\renpy-8.3.4-sdk\renpy-8.3.4-sdk\renpy\substitutions.py", line 86, in interpolate
-    raise e
-  File "D:\Python\renpy-8.3.4-sdk\renpy-8.3.4-sdk\renpy\substitutions.py", line 78, in interpolate
-    value = renpy.python.py_eval(code, {}, scope)
-  File "D:\Python\renpy-8.3.4-sdk\renpy-8.3.4-sdk\renpy\python.py", line 1207, in py_eval
-    code = py_compile(code, 'eval')
-  File "D:\Python\renpy-8.3.4-sdk\renpy-8.3.4-sdk\renpy\python.py", line 1144, in py_compile
-    raise e
-  File "D:\Python\renpy-8.3.4-sdk\renpy-8.3.4-sdk\renpy\python.py", line 1081, in py_compile
-    raise orig_e
-  File "D:\Python\renpy-8.3.4-sdk\renpy-8.3.4-sdk\renpy\python.py", line 1073, in py_compile
-    tree = compile(source, filename, py_mode, ast.PyCF_ONLY_AST | flags, 1)
-SyntaxError: unexpected EOF while parsing (<none>, line 1)
+  File "game/script.rpy", line 72, in execute
+    text txt + i
+  File "game/script.rpy", line 72, in <module>
+    text txt + i
+TypeError: can only concatenate str (not "int") to str
 
 Windows-10-10.0.22621 AMD64
 Ren'Py 8.3.4.24120703
  
-Thu Jan 30 19:30:27 2025
+Sat Feb  1 09:10:19 2025

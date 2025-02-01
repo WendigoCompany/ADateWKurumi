@@ -1,5 +1,29 @@
 import renpy.exports as renpy
 
+cache={
+
+}
+
+def see_module(module):
+    for i in module.__dict__:
+        print(i)
+
+
+def get_cache(key):
+    try:
+        return cache.get(key)
+    except Exception as err:
+        if "is not callable" in str(err):
+            return None
+        else:
+            print("get_cache")
+            print(err)
+            return False
+
+def set_cache(key,value):
+    cache[key] = value
+    # renpy.register_persistent(key, value)
+    # renpy.save_persistent()
 
 def disclaimed(action="r", newValue=False):
     if action == "r":

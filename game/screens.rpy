@@ -341,7 +341,7 @@ screen quick_menu():
             textbutton _(menu_traslated["QSave"]) action QuickSave()
             textbutton _(menu_traslated["QLoad"]) action QuickLoad()
             textbutton _(menu_traslated["Prefs"]) action ShowMenu('preferences')
-            
+            textbutton _(menu_traslated["Credits"]) action ShowMenu("credits")
 
 ## This code ensures that the quick_menu screen is displayed in-game, whenever
 ## the player has not explicitly hidden the interface.

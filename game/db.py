@@ -262,13 +262,13 @@ menu_db = {
             "Music and SFX by:",
             [
                 "Idea Factory",
-                " - Date A Live VN Trilogy Sountrack and a beatiful history.",
+                " - Date A Live VN Trilogy Sountrack and a beautiful history.",
             ],
             [
                 "Compile Heart",
-                " - Date A Live VN Trilogy Sountrack and a beatiful history.",
+                " - Date A Live VN Trilogy Sountrack and a beautiful history.",
             ],
-            ["Sting", " - Date A Live VN Trilogy Sountrack and a beatiful history."],
+            ["Sting", " - Date A Live VN Trilogy Sountrack and a beautiful history."],
         ],
         "es": [
             "Musica y Efectos echos por:",
