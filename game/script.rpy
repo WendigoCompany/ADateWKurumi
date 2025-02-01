@@ -75,8 +75,35 @@
 
 # Llama al menú de opciones
 
-label start:
+label intro:
+    recluter "[get_txt_db('intro', 0, extra={'dialogo': 1})]"
+    recluter "[get_txt_db('intro', 1, extra={'dialogo': 1})]"
+
+    $ name = renpy.input(get_txt_db('intro', 13, extra={'dialogo': 1}))
+    $ pl.name = name
+    menu:
+        "[get_txt_db('intro', 2, extra={'dialogo': 1})]"
+        "[get_txt_db_fun('uscs', 'intro_menu', extra={'subindex': 1})]":    
+            pass
+        "[get_txt_db_fun('uscs', 'intro_menu', extra={'subindex': 2})]":
+            $ renpy.quit()
+    recluter "[get_txt_db('intro', 3, extra={'dialogo': 1})]"
+    recluter "[get_txt_db('intro', 4, extra={'dialogo': 1})]"
+    recluter "[get_txt_db('intro', 5, extra={'dialogo': 1})]"
+    recluter "[get_txt_db('intro', 6, extra={'dialogo': 1})]"
+    recluter "[get_txt_db('intro', 7, extra={'dialogo': 1})]"
+    recluter "[get_txt_db('intro', 8, extra={'dialogo': 1})]"
+    recluter "[get_txt_db('intro', 9, extra={'dialogo': 1})]"
+    recluter "[get_txt_db('intro', 10, extra={'dialogo': 1})]"
+    recluter "[get_txt_db('intro', 11, extra={'dialogo': 1})]"
+    recluter "[get_txt_db('intro', 12, extra={'dialogo': 1})]"
+    # recluter "[get_txt_db('intro', 11, extra={'dialogo': 1})]"
     jump seleccionar_profile
+
+
+label start:
+    jump intro
+    # jump seleccionar_profile
         
 # label continuar:
 #     "Has seleccionado la opción [opcion_seleccionada]"

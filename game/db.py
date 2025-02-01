@@ -304,7 +304,25 @@ user_choises = {
             "en": "Back to Selection",
             "es": "Volver a la seleccion",
         },
-    ]
+    ],
+    "intro_menu": [
+        {
+            "en": "Sign",
+            "es": "Firmar",
+        },
+        {
+            "en": "Do not sign",
+            "es": "No firmar",
+        },
+    ],
+}
+
+
+generic_names = {
+    "recluter": {
+        "en": "Recruiter",
+        "es": "Reclutadora",
+    },
 }
 
 omni_txt = [
@@ -323,6 +341,68 @@ omni_txt = [
 """
 
 
+intro_dialogos_db = [
+    {
+        "en": "First of all, congratulations on your promotion.",
+        "es": "Primeramente, felicitaciones por su ascenso.",
+    },
+    {
+        "en": "As per our company's standards, I will ask you to sign the contract again with your name and signature. We apologize, but these are the rules.",
+        "es": "Como estándares de nuestra compañía, le pediré que nuevamente firme el contrato con su nombre y firma. Lo sentimos, pero son las reglas.",
+    },
+    {
+        "en": "I hereby declare that I am over 18 years old and comply with the high standards of Quality, Safety, Honor, and Respect that the Wendigo Agency represents:",
+        "es": "Por medio de la presente, declaro ser mayor de 18 años y cumplir con los altos estándares de Calidad, Seguridad, Honor y Respeto que la Agencia Wendigo representa:",
+    },
+    {
+        "en": "Welcome to Wendigo Agency, one of the leading pornography recruitment, creation and distribution agencies in the region.",
+        "es": "Te damos la bienvenida a Agencia Wendigo , una de las principales agencias de contratación, creación y distribución de pornografía de la región.",
+    },
+    {
+        "en": "Year after year, hundreds of new models come through our agency. Hundreds of thousands of hours of content are recorded and distributed to our loyal subscribers.",
+        "es": "Año a año, cientos de nuevas modelos pasan por nuestra agencia. Cientos de miles de horas de contenido son grabadas y distribuidas a nuestros fieles suscriptores.",
+    },
+    {
+        "en": "So, as a new agent, I hope you understand the weight of your new job position.",
+        "es": "Así que, como nuevo agente, espero que entienda el peso de su nuevo puesto de trabajo.",
+    },
+    {
+        "en": "In the next few days, you should carefully select from the profiles we will provide you. ",
+        "es": "En los próximos días, deberá elegir minuciosamente entre los perfiles que le proporcionaremos. ",
+    },
+    {
+        "en": "Remember, your task not only covers filming the preliminary interview but also accompanying and directing the new candidates.",
+        "es": "Recuerde, su tarea no solo abarca la filmación de la entrevista preliminar, sino también, el acompañamiento y dirección de las nuevas candidatas.",
+    },
+    {
+        "en": "So, think carefully before starting a project.",
+        "es": "Por ende, piense bien antes de empezar un proyecto.",
+    },
+    {
+        "en": "You will have to accompany and direct them until they can continue their career independently.",
+        "es": "Deberá acompañarlas y dirigirlas hasta que estas puedan continuar su trayectoria de forma independiente.",
+    },
+    {
+        "en": "You should also suggest topics, accompany them in their dissemination tasks, direct and, if they ask for it, accompany them in the recording of different footage.",
+        "es": "Tambien deberá sugerir temas, acompañarlas en sus tareas de difusión, dirigir y, en caso de que ellas se lo pidan, acompañarlas en la grabación de los diferentes metrajes.",
+    },
+    {
+        "en": "BE PROFESSIONAL, AND DO NOT LEAVE THE WORK HALFWAY DONE.",
+        "es": "SEA PROFESIONAL, Y NO DEJE EL TRABAJO A MEDIAS.",
+    },
+    {
+        "en": "Well, with all that said. Good luck and remember your instructions.",
+        "es": "Bien, con todo lo dicho. Buena suerte y recuerde sus instrucciones.",
+    },
+    {
+        "en": "My name is:",
+        "es": "Mi nombre es:",
+    },
+]
+
+dialogos = {"intro": intro_dialogos_db}
+
+
 def get_txt_db(db, index, extra={}):
     lang = renpy.game.preferences.language
     txt = "ERR"
@@ -335,6 +415,17 @@ def get_txt_db(db, index, extra={}):
             txt = user_choises[index][extra["subindex"] - 1].get(lang)
         else:
             txt = user_choises[index].get(lang)
+    elif db == "gen":
+        txt = generic_names[index].get(lang)
+    elif extra.get("dialogo"):
+        # DBs de dialogos que son arrs
+        db_arrs = ["intro"]
+        # DBs de dialogos que son dicts
+        db_dict = []
+
+        if db in db_arrs:
+            txt = dialogos[db][index].get(lang)
+        # dialogos
     return txt
 
 
@@ -343,3 +434,8 @@ base_profiles = "/profiles/"
 profiles = [
     (base_profiles + "KurumiTokisaki_Profile.png", "Kurumi Tokisaki"),
 ]
+
+
+# Sign
+
+# Do not sign

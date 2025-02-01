@@ -1,5 +1,5 @@
 import renpy.exports as renpy
-
+from db import profiles
 cache = {
 
 }
@@ -27,6 +27,11 @@ def set_cache(key, value):
     # renpy.register_persistent(key, value)
     # renpy.save_persistent()
 
+def save_end_route(gid):
+    if not renpy.persistent.girls_finished:
+        renpy.register_persistent("girls_finished", [])
+    
+    renpy.persistent.girls_finished.append(profiles[gid])
 
 def disclaimed(action="r", newValue=False):
     if action == "r":
