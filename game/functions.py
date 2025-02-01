@@ -1,8 +1,9 @@
 import renpy.exports as renpy
 
-cache={
+cache = {
 
 }
+
 
 def see_module(module):
     for i in module.__dict__:
@@ -20,10 +21,12 @@ def get_cache(key):
             print(err)
             return False
 
-def set_cache(key,value):
+
+def set_cache(key, value):
     cache[key] = value
     # renpy.register_persistent(key, value)
     # renpy.save_persistent()
+
 
 def disclaimed(action="r", newValue=False):
     if action == "r":
@@ -39,6 +42,12 @@ def disclaimed(action="r", newValue=False):
         renpy.save_persistent()
         return renpy.game.persistent.disclaimed
         # return renpy.game.persistent.disclaimed
+
+
+def get_lang():
+    if not renpy.game.preferences.language:
+        return "en"
+    return renpy.game.preferences.language
 
 
 def set_lang(lang):

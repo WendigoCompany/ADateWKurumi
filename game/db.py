@@ -257,6 +257,14 @@ menu_db = {
         "en": "Credits",
         "es": "Creditos",
     },
+    "next": {
+        "en": "Next",
+        "es": "Siguiente",
+    },
+    "prev": {
+        "en": "Back",
+        "es": "Volver",
+    },
     "creditsMenu": {
         "en": [
             "Music and SFX by:",
@@ -286,6 +294,19 @@ menu_db = {
 }
 
 
+user_choises = {
+    "profile_menu": [
+        {
+            "en": "Hire",
+            "es": "Contratar",
+        },
+        {
+            "en": "Back to Selection",
+            "es": "Volver a la seleccion",
+        },
+    ]
+}
+
 omni_txt = [
     {
         "en": "My name is... (Default = Shido)",
@@ -302,12 +323,23 @@ omni_txt = [
 """
 
 
-def get_txt_db(db, index):
+def get_txt_db(db, index, extra={}):
     lang = renpy.game.preferences.language
     txt = "ERR"
     if db == "menu":
         txt = menu_db[index].get(lang)
     elif db == "omni":
         txt = omni_txt[index].get(lang)
-
+    elif db == "uscs":
+        if extra.get("subindex"):
+            txt = user_choises[index][extra["subindex"] - 1].get(lang)
+        else:
+            txt = user_choises[index].get(lang)
     return txt
+
+
+base_profiles = "/profiles/"
+
+profiles = [
+    (base_profiles + "KurumiTokisaki_Profile.png", "Kurumi Tokisaki"),
+]

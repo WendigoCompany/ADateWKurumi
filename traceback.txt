@@ -1,84 +1,34 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 106, in script
-    $ opcion_seleccionada = renpy.call_screen("opciones_menu",opciones)
-  File "game/script.rpy", line 106, in <module>
-    $ opcion_seleccionada = renpy.call_screen("opciones_menu",opciones)
-  File "game/script.rpy", line 58, in execute
-    screen opciones_menu(options):
-  File "game/script.rpy", line 58, in execute
-    screen opciones_menu(options):
-  File "game/script.rpy", line 65, in execute
-    vbox:
-  File "game/script.rpy", line 66, in execute
-    for i, (img, txt) in enumerate(options):
-  File "game/script.rpy", line 67, in execute
-    if i // 4 == page:
-  File "game/script.rpy", line 68, in execute
-    button:
-  File "game/script.rpy", line 70, in execute
-    hbox:
-  File "game/script.rpy", line 72, in execute
-    text txt + i
-  File "game/script.rpy", line 72, in <module>
-    text txt + i
-TypeError: can only concatenate str (not "int") to str
+  File "game/game_manager.rpy", line 6, in script
+    "[get_cache("profile_selected")]"
+  File "renpy/common/00library.rpy", line 324, in say
+    who(what, interact=interact, *args, **kwargs)
+Exception: Say has image attributes ('profile_selected',), but there's no image tag associated with the speaking character.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 106, in script
-    $ opcion_seleccionada = renpy.call_screen("opciones_menu",opciones)
-  File "D:\Python\renpy-8.3.4-sdk\renpy-8.3.4-sdk\renpy\ast.py", line 827, in execute
-    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
-  File "D:\Python\renpy-8.3.4-sdk\renpy-8.3.4-sdk\renpy\python.py", line 1178, in py_exec_bytecode
-    exec(bytecode, globals, locals)
-  File "game/script.rpy", line 106, in <module>
-    $ opcion_seleccionada = renpy.call_screen("opciones_menu",opciones)
-  File "D:\Python\renpy-8.3.4-sdk\renpy-8.3.4-sdk\renpy\exports\statementexports.py", line 345, in call_screen
-    rv = renpy.ui.interact(mouse="screen", type="screen", roll_forward=roll_forward)
-  File "D:\Python\renpy-8.3.4-sdk\renpy-8.3.4-sdk\renpy\ui.py", line 301, in interact
-    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
-  File "D:\Python\renpy-8.3.4-sdk\renpy-8.3.4-sdk\renpy\display\core.py", line 2215, in interact
-    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, pause_modal=pause_modal, **kwargs) # type: ignore
-  File "D:\Python\renpy-8.3.4-sdk\renpy-8.3.4-sdk\renpy\display\core.py", line 2745, in interact_core
-    root_widget.visit_all(lambda d : d.per_interact())
-  File "D:\Python\renpy-8.3.4-sdk\renpy-8.3.4-sdk\renpy\display\displayable.py", line 434, in visit_all
-    d.visit_all(callback, seen)
-  File "D:\Python\renpy-8.3.4-sdk\renpy-8.3.4-sdk\renpy\display\displayable.py", line 434, in visit_all
-    d.visit_all(callback, seen)
-  File "D:\Python\renpy-8.3.4-sdk\renpy-8.3.4-sdk\renpy\display\displayable.py", line 434, in visit_all
-    d.visit_all(callback, seen)
-  File "D:\Python\renpy-8.3.4-sdk\renpy-8.3.4-sdk\renpy\display\screen.py", line 480, in visit_all
-    callback(self)
-  File "D:\Python\renpy-8.3.4-sdk\renpy-8.3.4-sdk\renpy\display\core.py", line 2745, in <lambda>
-    root_widget.visit_all(lambda d : d.per_interact())
-  File "D:\Python\renpy-8.3.4-sdk\renpy-8.3.4-sdk\renpy\display\screen.py", line 491, in per_interact
-    self.update()
-  File "D:\Python\renpy-8.3.4-sdk\renpy-8.3.4-sdk\renpy\display\screen.py", line 697, in update
-    self.screen.function(**self.scope)
-  File "game/script.rpy", line 58, in execute
-    screen opciones_menu(options):
-  File "game/script.rpy", line 58, in execute
-    screen opciones_menu(options):
-  File "game/script.rpy", line 65, in execute
-    vbox:
-  File "game/script.rpy", line 66, in execute
-    for i, (img, txt) in enumerate(options):
-  File "game/script.rpy", line 67, in execute
-    if i // 4 == page:
-  File "game/script.rpy", line 68, in execute
-    button:
-  File "game/script.rpy", line 70, in execute
-    hbox:
-  File "game/script.rpy", line 72, in execute
-    text txt + i
-  File "game/script.rpy", line 72, in <module>
-    text txt + i
-TypeError: can only concatenate str (not "int") to str
+  File "game/game_manager.rpy", line 6, in script
+    "[get_cache("profile_selected")]"
+  File "D:\Python\renpy-8.3.4-sdk\renpy-8.3.4-sdk\renpy\ast.py", line 2579, in execute
+    Say.execute(self)
+  File "D:\Python\renpy-8.3.4-sdk\renpy-8.3.4-sdk\renpy\ast.py", line 621, in execute
+    renpy.exports.say(who, what, *args, **kwargs)
+  File "D:\Python\renpy-8.3.4-sdk\renpy-8.3.4-sdk\renpy\exports\sayexports.py", line 130, in say
+    renpy.store.say(who, what, *args, **kwargs)
+  File "renpy/common/00library.rpy", line 324, in say
+    who(what, interact=interact, *args, **kwargs)
+  File "D:\Python\renpy-8.3.4-sdk\renpy-8.3.4-sdk\renpy\character.py", line 1393, in __call__
+    old_attr_state = self.handle_say_attributes(False, interact)
+  File "D:\Python\renpy-8.3.4-sdk\renpy-8.3.4-sdk\renpy\character.py", line 1212, in handle_say_attributes
+    if self.resolve_say_attributes(predicting, attrs):
+  File "D:\Python\renpy-8.3.4-sdk\renpy-8.3.4-sdk\renpy\character.py", line 1138, in resolve_say_attributes
+    raise Exception("Say has image attributes %r, but there's no image tag associated with the speaking character." % (attrs,))
+Exception: Say has image attributes ('profile_selected',), but there's no image tag associated with the speaking character.
 
 Windows-10-10.0.22621 AMD64
 Ren'Py 8.3.4.24120703
  
-Sat Feb  1 09:10:19 2025
+Sat Feb  1 16:25:19 2025

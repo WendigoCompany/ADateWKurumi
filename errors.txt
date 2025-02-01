@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 105: expected '=' not found.
-    define opcion_seleccionada
-                              ^
+File "game/perfiles.manager.rpy", line 54: Line is indented, but the preceding xalign statement does not expect a block. Please check this line's indentation. You may have forgotten a colon (:).
+    button:
+    ^
 
 Ren'Py Version: Ren'Py 8.3.4.24120703
-Sat Feb  1 10:50:45 2025
+Sat Feb  1 16:05:00 2025
