@@ -1,5 +1,5 @@
 import renpy.exports as renpy
-from db import profiles
+from profiles import profiles
 cache = {
 
 }
@@ -61,4 +61,4 @@ def set_lang(lang):
     disclaimed("w", True)
     renpy.save_persistent()
     renpy.reload_script()
-    # renpy.game.persistent.disclaimed = False
+    # renpy.game.persistent.disclaimed = False 

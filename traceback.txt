@@ -1,34 +1,22 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/game_manager.rpy", line 6, in script
-    "[get_cache("profile_selected")]"
-  File "renpy/common/00library.rpy", line 324, in say
-    who(what, interact=interact, *args, **kwargs)
-Exception: Say has image attributes ('profile_selected',), but there's no image tag associated with the speaking character.
+  File "game/game_manager.rpy", line 7, in script
+    jump naoyama_intro
+ScriptError: could not find label 'naoyama_intro'.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/game_manager.rpy", line 6, in script
-    "[get_cache("profile_selected")]"
-  File "D:\Python\renpy-8.3.4-sdk\renpy-8.3.4-sdk\renpy\ast.py", line 2579, in execute
-    Say.execute(self)
-  File "D:\Python\renpy-8.3.4-sdk\renpy-8.3.4-sdk\renpy\ast.py", line 621, in execute
-    renpy.exports.say(who, what, *args, **kwargs)
-  File "D:\Python\renpy-8.3.4-sdk\renpy-8.3.4-sdk\renpy\exports\sayexports.py", line 130, in say
-    renpy.store.say(who, what, *args, **kwargs)
-  File "renpy/common/00library.rpy", line 324, in say
-    who(what, interact=interact, *args, **kwargs)
-  File "D:\Python\renpy-8.3.4-sdk\renpy-8.3.4-sdk\renpy\character.py", line 1393, in __call__
-    old_attr_state = self.handle_say_attributes(False, interact)
-  File "D:\Python\renpy-8.3.4-sdk\renpy-8.3.4-sdk\renpy\character.py", line 1212, in handle_say_attributes
-    if self.resolve_say_attributes(predicting, attrs):
-  File "D:\Python\renpy-8.3.4-sdk\renpy-8.3.4-sdk\renpy\character.py", line 1138, in resolve_say_attributes
-    raise Exception("Say has image attributes %r, but there's no image tag associated with the speaking character." % (attrs,))
-Exception: Say has image attributes ('profile_selected',), but there's no image tag associated with the speaking character.
+  File "game/game_manager.rpy", line 7, in script
+    jump naoyama_intro
+  File "D:\Python\renpy-8.3.4-sdk\renpy-8.3.4-sdk\renpy\ast.py", line 1705, in execute
+    rv = renpy.game.script.lookup(target)
+  File "D:\Python\renpy-8.3.4-sdk\renpy-8.3.4-sdk\renpy\script.py", line 1103, in lookup
+    raise ScriptError("could not find label '%s'." % str(original))
+ScriptError: could not find label 'naoyama_intro'.
 
 Windows-10-10.0.22621 AMD64
 Ren'Py 8.3.4.24120703
  
-Sat Feb  1 16:25:19 2025
+Sun Feb  2 16:08:23 2025

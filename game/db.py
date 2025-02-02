@@ -429,11 +429,11 @@ def get_txt_db(db, index, extra={}):
     return txt
 
 
-base_profiles = "/profiles/"
+# base_profiles = "/profiles/"
 
-profiles = [
-    (base_profiles + "KurumiTokisaki_Profile.png", "Kurumi Tokisaki"),
-]
+# profiles = [
+#     (base_profiles + "KurumiTokisaki_Profile.png", "Kurumi Tokisaki"),
+# ]
 
 
 # Sign

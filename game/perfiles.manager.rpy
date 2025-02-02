@@ -1,6 +1,7 @@
 init python:
     from functions import get_cache , set_cache , get_lang
-    from db import profiles,get_txt_db
+    from db import get_txt_db
+    from profiles import profiles
 
     def get_profile():
         return '/profiles/' + profile_selected[1].replace(" ","") +'_'+ get_lang_fun() + ".png"
