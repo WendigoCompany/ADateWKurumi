@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/perfiles.manager.rpy", line 58: expected a keyword argument, colon, or end of line.
-    text text "[color=#000000][get_txt_db_fun('menu', 'next')][/color]"
-              ^
+File "game/KurumiTokisaki.rpy", line 9: invalid syntax
+    module_memory_db["aux_names"] = from KurumiTokisaki_db import db_aux_name
+                                     ^
 
 Ren'Py Version: Ren'Py 8.3.4.24120703
-Thu Feb  6 21:58:32 2025
+Fri Feb  7 18:58:56 2025

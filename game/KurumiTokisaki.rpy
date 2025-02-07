@@ -1,11 +1,11 @@
-init python:
-    from KurumiTokisaki_db import db_aux_name
-    from patch_essencials import get_txt_patchDB
-
 define aux = Character("Aux")
 
+define w = Character("{color=#ff1010}Kurumi{/color}")
 
+# "#ff1010"
 label kurutoki_intro:
+    $ from KurumiTokisaki_db import db_aux_name
+    $ from patch_essencials import get_txt_patchDB
     jump firts_intro
 
 

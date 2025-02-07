@@ -4,3 +4,17 @@ db_aux_name =[
      "es": "Asistente",
  }       
 ]
+
+db_aux_dialogs=[
+
+]
+
+
+db_player_dialogs=[
+    
+]
+
+
+db_waifu_dialogs=[
+    
+]
