@@ -73,8 +73,11 @@
 #     ]
 
 
-# Llama al menú de opciones
+#Memoria interna, usada para precargar los dialogos de la waifu
+define module_memory_db = {}
 
+
+# Llama al menú de opciones
 label intro:
     scene bg OFICINA_CENTRAL  with dissolve
     play music "music/loby.mp3" fadein 0.5 volume 0.75
