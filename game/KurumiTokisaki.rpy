@@ -26,6 +26,6 @@ label firts_intro:
     pl "[get_txt_patchDB(db_player_kurumitokisaki_dialogs, 1)]"
     pl "[get_txt_patchDB(db_player_kurumitokisaki_dialogs, 2)]"
     scene bg BLACK_SCREEN with dissolve
-    "[get_txt_patchDB(db_aux_kurumitokisaki_dialogs, 1)]"
+    "[get_txt_patchDB(db_aux_kurumitokisaki_dialogs, 0)]"
     pl ""
     pl "..."

@@ -79,6 +79,7 @@ define module_memory_db = {}
 
 # Llama al menú de opciones
 label intro:
+    
     scene bg OFICINA_CENTRAL  with dissolve
     play music "music/loby.mp3" fadein 0.5 volume 0.75
     play sound "sfx/office.mp3" fadein 0.5 volume 0.45
@@ -86,7 +87,9 @@ label intro:
     recluter "[get_txt_db('intro', 1, extra={'dialogo': 1})]"
     
     $ name = renpy.input(get_txt_db('intro', 13, extra={'dialogo': 1}))
-    $ pl.name = "{color=#2786eb}[name]{/color}"
+    $ set_cache("player_name", name)
+    $ pl.name = "{color=#2786eb}[get_cache('player_name')]{/color}"
+    
     menu:
         "[get_txt_db('intro', 2, extra={'dialogo': 1})]"
         "[get_txt_db_fun('uscs', 'intro_menu', extra={'subindex': 1})]":    

@@ -2,9 +2,18 @@
 errors listed below, and try again.
 
 
+<<<<<<< HEAD
 File "game/KurumiTokisaki.rpy", line 9: invalid syntax
     module_memory_db["aux_names"] = from KurumiTokisaki_db import db_aux_name
                                      ^
 
 Ren'Py Version: Ren'Py 8.3.4.24120703
 Fri Feb  7 18:58:56 2025
+=======
+File "game/script.rpy", line 91: invalid syntax
+    pl.name = "{color=#2786eb}[get_cache("player_name")]{/color}"
+                                           ^
+
+Ren'Py Version: Ren'Py 8.3.4.24120703
+Fri Feb  7 19:30:39 2025
+>>>>>>> 6572de41eae49641512253c3baff629d78a8e41f

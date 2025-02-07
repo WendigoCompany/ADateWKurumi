@@ -6,7 +6,7 @@ db_aux_kurumitokisaki_name = [
 ]
 
 db_aux_kurumitokisaki_dialogs = [
-        {
+    {
         "en": "[A couple of days later.]",
         "es": "[Un par de días después.]",
     },
@@ -26,14 +26,10 @@ db_player_kurumitokisaki_dialogs = [
         "en": "(I'll send her an email to arrange.)",
         "es": "(Voy a enviarle un correo para acordar.)",
     },
-
 ]
 
 
 db_kurumitokisaki_dialogs = []
-
-
-
 
 
 #  {
