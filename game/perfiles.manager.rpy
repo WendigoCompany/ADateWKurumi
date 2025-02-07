@@ -67,7 +67,6 @@ screen profiles_menu(options):
 
 label seleccionar_profile:
     stop sound
-    stop music fadeout 0.5
     $ profile_selected = renpy.call_screen("profiles_menu",profiles)
     if profile_selected == "s":
         if get_cache_fun("profiles_page")  < (len(profiles) // max_per_page ) :
@@ -101,6 +100,6 @@ label profile_confirm:
             jump game_nav
         "[get_txt_db_fun('uscs', 'profile_menu', extra={'subindex': 2})]":
             hide pro_img with dissolve
-            jump start
+            jump seleccionar_profile
             
     
