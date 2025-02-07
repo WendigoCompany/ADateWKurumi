@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/perfiles.manager.rpy", line 58: expected a keyword argument, colon, or end of line.
-    text text "[color=#000000][get_txt_db_fun('menu', 'next')][/color]"
-              ^
+File "game/script.rpy", line 91: invalid syntax
+    pl.name = "{color=#2786eb}[get_cache("player_name")]{/color}"
+                                           ^
 
 Ren'Py Version: Ren'Py 8.3.4.24120703
-Thu Feb  6 21:58:32 2025
+Fri Feb  7 19:30:39 2025
