@@ -86,7 +86,7 @@ label intro:
     recluter "[get_txt_db('intro', 1, extra={'dialogo': 1})]"
     
     $ name = renpy.input(get_txt_db('intro', 13, extra={'dialogo': 1}))
-    $ pl.name = name
+    $ pl.name = "{color=#2786eb}[name]{/color}"
     menu:
         "[get_txt_db('intro', 2, extra={'dialogo': 1})]"
         "[get_txt_db_fun('uscs', 'intro_menu', extra={'subindex': 1})]":    
