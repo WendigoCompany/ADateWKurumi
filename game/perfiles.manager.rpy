@@ -66,6 +66,8 @@ screen profiles_menu(options):
             hover_background "#ff31878e"
 
 label seleccionar_profile:
+    stop sound
+    stop music fadeout 0.5
     $ profile_selected = renpy.call_screen("profiles_menu",profiles)
     if profile_selected == "s":
         if get_cache_fun("profiles_page")  < (len(profiles) // max_per_page ) :

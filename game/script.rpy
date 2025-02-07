@@ -77,9 +77,11 @@
 
 label intro:
     scene bg OFICINA_CENTRAL  with dissolve
+    play music "music/loby.mp3" fadein 0.5 volume 0.75
+    play sound "sfx/office.mp3" fadein 0.5 volume 0.45
     recluter "[get_txt_db('intro', 0, extra={'dialogo': 1})]"
     recluter "[get_txt_db('intro', 1, extra={'dialogo': 1})]"
-
+    
     $ name = renpy.input(get_txt_db('intro', 13, extra={'dialogo': 1}))
     $ pl.name = name
     menu:

@@ -347,7 +347,7 @@ intro_dialogos_db = [
         "es": "Primeramente, felicitaciones por su ascenso.",
     },
     {
-        "en": "As per our company's standards, I will ask you to sign the contract again with your name and signature. We apologize, but these are the rules.",
+        "en": "According to our company standards, I will ask you to sign the contract again with your name and signature. We apologize, but these are the rules.",
         "es": "Como estándares de nuestra compañía, le pediré que nuevamente firme el contrato con su nombre y firma. Lo sentimos, pero son las reglas.",
     },
     {
