@@ -1,3 +1,7 @@
+python:
+    from KurumiTokisaki_db import db_aux_name
+    from e import db_aux_name
+
 define aux = Character("Aux")
 
 label kurutoki_intro:
