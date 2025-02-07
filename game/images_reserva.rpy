@@ -1,2 +1,6 @@
 define base = "/assets/"
-image PROFILE_HOJA = base + "pro_hoja.png"
+
+# BGs
+image bg OFICINA_CENTRAL = base + "Oficinacentral.png"
+image bg OFICINA_NORMAL = base + "Oficina_Nomarl.bg.png"
+# BGs

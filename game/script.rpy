@@ -76,6 +76,7 @@
 # Llama al menú de opciones
 
 label intro:
+    scene bg OFICINA_CENTRAL  with dissolve
     recluter "[get_txt_db('intro', 0, extra={'dialogo': 1})]"
     recluter "[get_txt_db('intro', 1, extra={'dialogo': 1})]"
 
@@ -98,6 +99,7 @@ label intro:
     recluter "[get_txt_db('intro', 11, extra={'dialogo': 1})]"
     recluter "[get_txt_db('intro', 12, extra={'dialogo': 1})]"
     # recluter "[get_txt_db('intro', 11, extra={'dialogo': 1})]"
+    scene bg OFICINA_NORMAL  with dissolve
     jump seleccionar_profile
 
 

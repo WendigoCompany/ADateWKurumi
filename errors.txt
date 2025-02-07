@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 101: end of line expected.
-    jump seleccionar_profile with dissolve
-                             ^
+File "game/perfiles.manager.rpy", line 58: expected a keyword argument, colon, or end of line.
+    text text "[color=#000000][get_txt_db_fun('menu', 'next')][/color]"
+              ^
 
 Ren'Py Version: Ren'Py 8.3.4.24120703
-Sat Feb  1 18:16:25 2025
+Thu Feb  6 21:58:32 2025
