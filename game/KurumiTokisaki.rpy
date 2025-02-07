@@ -1,8 +1,9 @@
-python:
+init python:
     from KurumiTokisaki_db import db_aux_name
-    from e import db_aux_name
+    from patch_essencials import get_txt_patchDB
 
 define aux = Character("Aux")
+
 
 label kurutoki_intro:
     jump firts_intro
@@ -14,7 +15,7 @@ label call_finished:
 
 #PRIMERA INTERACCION
 label firts_intro:
-    $ aux.name = "{color=#bbfff0}aSS{/color}"
+    $ aux.name = "{color=#bbfff0}[get_txt_patchDB(db_aux_name, 0)]{/color}"
     stop music fadeout .5
     scene bg BLACK_SCREEN with dissolve
     $ renpy.pause(3)
