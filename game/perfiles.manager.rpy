@@ -48,22 +48,22 @@ screen profiles_menu(options):
                     action Return(i)
                     hbox:
                         add im.Scale(img, 150, 150)  
-                        text txt
-                    hover_background "#cccccc"
+                        text txt color "#000000"
+                    hover_background "#ff31878e"
         text ""
         button:
             xalign 0.5
             action Return("a")
             hbox:
-                text get_txt_db_fun("menu", "next")
-            hover_background "#cccccc"
+                text get_txt_db_fun("menu", "next") color "#000000"
+            hover_background "#ff31878e"
 
         button:
             xalign 0.5
             action Return("s")
             hbox:
-                text get_txt_db_fun("menu", "prev")
-            hover_background "#cccccc"
+                text get_txt_db_fun("menu", "prev") color "#000000"
+            hover_background "#ff31878e"
 
 label seleccionar_profile:
     $ profile_selected = renpy.call_screen("profiles_menu",profiles)
