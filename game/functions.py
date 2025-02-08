@@ -1,6 +1,17 @@
 import renpy.exports as renpy
 from profiles import profiles
 
+# import datetime
+
+# # Timestamp que quieres convertir
+# timestamp = 1738981766.0325446
+
+# # Convertir el timestamp a un objeto datetime
+# fecha = datetime.datetime.fromtimestamp(timestamp)
+
+# # Imprimir la fecha y hora
+# print(fecha)
+
 
 cache = {
 
@@ -10,6 +21,8 @@ cache = {
 def see_module(module):
     for i in module.__dict__:
         print(i)
+
+# print(renpy.list_saved_games())
 
 # def save_persisnt(gid):
 #     if not renpy.persistent.girls_finished:
