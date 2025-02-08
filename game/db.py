@@ -1,5 +1,5 @@
 import renpy.exports as renpy
-
+import inspect
 menu_db = {
     "start": {
         "en": "Start",
@@ -290,6 +290,10 @@ menu_db = {
             ],
             ["Sting", " - Date A Live Trilogia VN Sountrack y una hermosa historia."],
         ],
+    },
+    "changename": {
+        "en": "Change Name",
+        "es": "Cambiar Nombre",
     },
 }
 

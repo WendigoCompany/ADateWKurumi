@@ -75,6 +75,7 @@ define menu_traslated = {
 "Calibrate" :get_txt_db("menu", "calibrate"),
 "Credits" :get_txt_db("menu", "credits"),
 "creditsMenu" :get_txt_db("menu", "creditsMenu"),
+"ChangeName" : get_txt_db("menu", "changename"),
 }
 
 define sync = False
@@ -342,6 +343,7 @@ screen quick_menu():
             textbutton _(menu_traslated["QLoad"]) action QuickLoad()
             textbutton _(menu_traslated["Prefs"]) action ShowMenu('preferences')
             textbutton _(menu_traslated["Credits"]) action ShowMenu("credits")
+            
 
 ## This code ensures that the quick_menu screen is displayed in-game, whenever
 ## the player has not explicitly hidden the interface.
@@ -392,6 +394,8 @@ screen navigation():
             textbutton _(menu_traslated["Save"]) action ShowMenu("save")
 
         textbutton _(menu_traslated["Load"]) action ShowMenu("load")
+        
+        textbutton _(menu_traslated["ChangeName"]) action Show("change_name_screen", transition=dissolve)
 
         textbutton _(menu_traslated["Preferences"]) action ShowMenu("preferences")
     
@@ -759,6 +763,7 @@ screen file_slots(title):
 
                         key "save_delete" action FileDelete(slot)
 
+      
             ## Buttons to access other pages.
             vbox:
                 style_prefix "page"
@@ -845,7 +850,7 @@ screen preferences():
 
     tag menu
 
-    use game_menu(_("Preferences"), scroll="viewport"):
+    use game_menu(_(menu_traslated["Preferences"]), scroll="viewport"):
 
         vbox:
 
@@ -925,6 +930,25 @@ screen preferences():
                         textbutton _(menu_traslated["Mute All"]):
                             action Preference("all mute", "toggle")
                             style "mute_all_button"
+                    
+# init python:
+#     import inspect
+    
+#     print(inspect.getsource(renpy.save))
+
+#     def cosa():
+#         print("PUTA FUNCIONA ALGO!!")
+#         return ""
+#     renpy.save = cosa
+    
+screen change_name_screen():
+    tag menu
+
+    use game_menu(_(menu_traslated["ChangeName"]), scroll="viewport"):
+        vbox:
+            label _("Introduce tu nuevo nombre:")
+            input id "name_input"
+            textbutton _("Guardar") action Function("")
 
 
 style pref_label is gui_label

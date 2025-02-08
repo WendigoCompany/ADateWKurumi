@@ -1,46 +1,565 @@
-2025-02-08 01:06:08 UTC
+2025-02-08 15:47:36 UTC
 Windows-10-10.0.22621
 Ren'Py 8.3.4.24120703
 
 Early init took 0.03s
 Loading error handling took 0.02s
-Loading script took 0.08s
-Loading save slot metadata took 0.03s
+Loading script took 0.06s
+Loading save slot metadata took 0.02s
 Loading persistent took 0.00s
+__name__
+__doc__
+__package__
+__loader__
+__spec__
+__path__
+__file__
+__cached__
+__builtins__
+division
+absolute_import
+with_statement
+print_function
+unicode_literals
+PY2
+basestring
+bchr
+bord
+chr
+open
+pystr
+range
+round
+str
+tobytes
+unicode
+gc
+io
+re
+time
+sys
+threading
+fnmatch
+os
+renpy
+pygame_sdl2
+sound
+music
+eval_who
+atl_warper
+get_alternate_base
+display_say
+predict_show_display_say
+show_display_say
+curry
+partial
+Keymap
+clear_keymap_cache
+is_selected
+is_sensitive
+map_event
+queue_event
+run
+run_action
+run_periodic
+run_unhovered
+capture_focus
+clear_capture_focus
+focus_coordinates
+get_focus_rect
+load_image
+load_rgba
+load_surface
+check_image_attributes
+get_available_image_attributes
+get_available_image_tags
+get_ordered_image_attributes
+get_registered_image
+image_exists
+has_image
+list_images
+Minigame
+predict_screen
+profile_screen
+current_screen
+define_screen
+get_displayable
+get_displayable_properties
+get_screen
+get_screen_variable
+get_widget
+get_widget_properties
+has_screen
+hide_screen
+set_screen_variable
+show_screen
+use_screen
+alt
+speak_extra_alt
+movie_start_displayable
+movie_start_fullscreen
+movie_stop
+displayable
+predict
+split_properties
+launch_editor
+not_infinite_loop
+reset_all_contexts
+commonexports
+renpy_pure
+register_shader
+has_live2d
+unelide_filename
+try_compile
+try_eval
+add_python_directory
+can_load
+copy_save
+force_autosave
+list_saved_games
+list_slots
+load
+newest_slot
+rename_save
+save
+scan_saved_game
+slot_json
+slot_mtime
+slot_screenshot
+unlink_save
+diff_memory
+profile_memory
+profile_rollback
+get_parse_errors
+register_persistent
+const
+not_const
+pure
+eval
+random
+get_save_token_keys
+register_sl_statement
+register_sl_displayable
+register_statement
+ParameterizedText
+check_text_tags
+filter_text_tags
+register_bmfont
+register_mudgefont
+register_sfont
+variable_font_info
+TextShader
+register_textshader
+BASELINE
+language_tailor
+TEXT_DISPLAYABLE
+TEXT_PARAGRAPH
+TEXT_TAG
+TEXT_TEXT
+change_language
+get_translation_identifier
+get_translation_info
+known_languages
+translate_string
+transform_text
+Choice
+actionexports
+confirm
+display_notify
+notify
+contextexports
+add_to_all_stores
+call_in_new_context
+call_replay
+call_stack_depth
+clear_game_runtime
+clear_line_log
+context_dynamic
+context_nesting_level
+context
+current_interact_type
+curried_call_in_new_context
+curried_invoke_in_new_context
+dynamic
+end_replay
+game_menu
+get_game_runtime
+get_line_log
+get_mode
+get_return_stack
+get_skipping
+get_statement_name
+invoke_in_new_context
+is_init_phase
+is_skipping
+jump_out_of_context
+last_interact_type
+mode
+pop_call
+pop_return
+scry
+set_return_stack
+stop_skipping
+debugexports
+error
+get_filename_line
+log
+pop_error_handler
+push_error_handler
+warp_to_line
+write_log
+displayexports
+_find_image
+add_layer
+can_fullscreen
+can_show
+cancel_gesture
+change_zorder
+clear_attributes
+clear_retain
+Container
+copy_images
+count_displayables_in_layer
+default_layer
+display_reset
+Displayable
+easy_displayable
+end_interaction
+flush_cache_file
+force_full_redraw
+free_memory
+get_adjustment
+get_at_list
+get_attributes
+get_hidden_tags
+get_image_bounds
+get_image_load_log
+get_mouse_name
+get_mouse_pos
+get_ongoing_transition
+get_physical_size
+get_placement
+get_refresh_rate
+get_renderer_info
+get_showing_tags
+get_texture_size
+get_transition
+get_zorder_list
+hide
+iconify
+IgnoreEvent
+image_size
+image
+is_mouse_visible
+is_pixel_opaque
+is_start_interact
+layer_at_list
+maximum_framerate
+placement
+predict_show
+quit_event
+redraw
+render_to_file
+render_to_surface
+render
+Render
+reset_physical_size
+restart_interaction
+scene_lists
+scene
+screenshot_to_bytes
+screenshot
+set_focus
+set_mouse_pos
+set_physical_size
+set_tag_attributes
+show_layer_at
+show
+showing
+shown_window
+take_screenshot
+timeout
+toggle_fullscreen
+transition
+fetchexports
+fetch_emscripten
+fetch_pause
+fetch_requests
+fetch
+FetchError
+proxies
+inputexports
+get_editable_input_value
+input
+set_editable_input_value
+web_input
+loaderexports
+exists
+file
+fsdecode
+fsencode
+list_files
+loadable
+munge
+notl_file
+open_file
+mediaexports
+movie_cutscene
+music_start
+music_stop
+play
+toggle_music
+menu_args
+menu_kwargs
+menuexports
+choice_for_skipping
+display_menu
+get_menu_args
+menu
+MenuEntry
+predict_menu
+persistentexports
+seen_label
+mark_label_seen
+mark_label_unseen
+seen_audio
+mark_audio_seen
+mark_audio_unseen
+seen_image
+mark_image_seen
+mark_image_unseen
+save_persistent
+is_seen
+platformexports
+check_permission
+get_on_battery
+get_sdl_dll
+get_sdl_window_pointer
+invoke_in_main_thread
+invoke_in_thread
+request_permission
+variant
+vibrate
+open_url
+predictexports
+cache_pin
+cache_unpin
+expand_predict
+predicting
+start_predict_screen
+start_predict
+stop_predict_screen
+stop_predict
+restartexports
+full_restart
+get_autoreload
+quit
+reload_script
+set_autoreload
+utter_restart
+rollbackexports
+block_rollback
+can_rollback
+checkpoint
+fix_rollback
+get_identifier_checkpoints
+get_roll_forward
+in_fixed_rollback
+in_rollback
+retain_after_load
+roll_forward_core
+roll_forward_info
+rollback
+suspend_rollback
+sayexports
+count_dialogue_blocks
+count_newly_seen_dialogue_blocks
+count_seen_dialogue_blocks
+curried_do_reshow_say
+do_reshow_say
+get_reshow_say
+get_say_attributes
+get_say_image_tag
+get_side_image
+last_say
+LastSay
+predict_say
+reshow_say
+say
+scry_say
+substitute
+tag_quoting_dict
+TagQuotingDict
+scriptexports
+get_all_labels
+has_label
+include_module
+load_language
+load_module
+load_string
+munged_filename
+statementexports
+call_screen
+call
+execute_default_statement
+imagemap
+jump
+pause
+return_statement
+with
+bits
+version
+version_string
+version_only
+version_name
+version_tuple
+license
+_platform
+platform
+store
+Any
+__main__
+_object
+update_path
+compat
+pickle
+copy
+types
+site
+namedtuple
+vc_version
+official
+nightly
+VersionTuple
+script_version
+savegame_suffix
+bytecode_version
+windows
+macintosh
+linux
+android
+ios
+emscripten
+experimental
+get_windows_version
+arch
+mobile
+macapp
+safe_mode_checked
+autoreload
+session
+backup_blacklist
+type_blacklist
+name_blacklist
+Backup
+backup
+plog
+import_all
+post_import
+issubmodule
+reload_all
+bootstrap
+config
+arguments
+display
+debug
+object
+game
+preferences
+webloader
+loader
+revertable
+pydict
+python
+py3analysis
+pyanalysis
+parameter
+ast
+atl
+color
+easy
+encryption
+execution
+lexersupport
+lexer
+loadsave
+savelocation
+savetoken
+persistent
+scriptedit
+parser
+performance
+script
+statements
+util
+versions
+styledata
+style
+substitutions
+translation
+text
+gl2
+gl
+audio
+ui
+screenlang
+sl2
+lint
+warp
+editor
+memory
+character
+uguu
+exports
+add_from
+dump
+minstore
+defaultstore
+test
+main
+six
+watch
+unwatch
+unwatchall
+register_style_preference
+set_style_preference
+get_style_preference
 --------------------------------
-Running init code took 0.02s
-Loading analysis data took 0.02s
+Running init code took 0.03s
+Loading analysis data took 0.01s
 Analyze and compile ATL took 0.00s
-Reloading save slot metadata took 0.02s
+Reloading save slot metadata took 0.01s
 Index archives took 0.00s
-Backing up script files to 'C:\\Users\\korra\\AppData\\Roaming/RenPy/backups\\A DATE WITH KURUMI':
 Dump and make backups took 0.03s
 Cleaning cache took 0.00s
 Making clean stores took 0.00s
-Initial gc took 0.01s
+Initial gc took 0.02s
 DPI scale factor: 1.250000
 nvdrs: Loaded, about to disable thread optimizations.
 nvdrs: Disabled thread optimizations.
-Creating interface object took 0.17s
+Creating interface object took 0.16s
 Cleaning stores took 0.00s
 Init translation took 0.02s
 Build styles took 0.00s
-Load screen analysis took 0.00s
-Analyze screens took 0.02s
+Load screen analysis took 0.01s
+Analyze screens took 0.00s
 Save screen analysis took 0.00s
-Prepare screens took 0.05s
+Prepare screens took 0.03s
 Save pyanalysis. took 0.00s
-Save bytecode. took 0.02s
+Save bytecode. took 0.00s
 Running _start took 0.00s
 Interface start took 0.04s
 
 Initializing gl2 renderer:
 primary display bounds: (0, 0, 3840, 2160)
 swap interval: 1 frames
-Fullscreen mode.
+Windowed mode.
 Vendor: "b'NVIDIA Corporation'"
 Renderer: b'NVIDIA GeForce RTX 3050/PCIe/SSE2'
 Version: b'4.6.0 NVIDIA 566.36'
 Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(3840, 2160) drawable=(3840, 2160)
+Screen sizes: virtual=(1920, 1080) physical=(2400, 1350) drawable=(2400, 1350)
 Maximum texture size: 4096x4096
+DESDE EL NUEVITO
+DESDE EL NUEVITO
+DESDE EL NUEVITO

@@ -79,6 +79,7 @@
 define module_memory_db = {}
 
 init python:
+    import overwrited
     from functions import  get_percache , set_percache
 
 # Llama al menú de opciones
@@ -118,5 +119,4 @@ label start:
         
 # label continuar:
 #     "Has seleccionado la opción [opcion_seleccionada]"
-
 

@@ -1,6 +1,6 @@
 import renpy.exports as renpy
 from profiles import profiles
-
+import inspect
 
 cache = {
 
@@ -89,3 +89,39 @@ def get_percache(key):
     return renpy.game.persistent.cache.get(key)
 
 # AGREGA PERSISTENCIA DE DATOS 
+
+
+import os
+
+def crear_archivo(nombre_archivo, contenido):
+    try:
+        with open(nombre_archivo, 'w') as archivo:
+            archivo.write(contenido)
+        ruta_completa = os.path.abspath(nombre_archivo)
+        print(f'Archivo "{nombre_archivo}" creado con éxito en {ruta_completa}.')
+    except Exception as e:
+        print(f'Error al crear el archivo: {e}')
+
+# Ejemplo de uso
+
+
+# # print("---------------------------------------------------------------------------")
+# # see_module(renpy.store)
+# # print("---------------------------------------------------------------------------")
+# # see_module(renpy.store.store)
+# # print("---------------------------------------------------------------------------")
+# # # inspect.getsource(renpy.store.save_name)
+# print(see_module(renpy.store.FileDelete))
+
+# # print("---------------------------------------------------------------------------")
+
+# print("---------------------------------------------------------------------------")
+# print(inspect.getsource(renpy.save))
+# print("---------------------------------------------------------------------------")
+# print(inspect.getsource(renpy.load))
+# # print("---------------------------------------------------------------------------")
+# print(inspect.getsource(renpy))
+
+see_module(renpy)
+
+

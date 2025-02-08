@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 75: python block expects a non-empty block.
+File "game/screens.rpy", line 766: 'init' is not a keyword argument or valid child of the fixed statement.
     init python:
-                ^
+        ^
 
 Ren'Py Version: Ren'Py 8.3.4.24120703
-Fri Feb  7 21:55:00 2025
+Sat Feb  8 12:15:35 2025
