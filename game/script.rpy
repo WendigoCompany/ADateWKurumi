@@ -73,13 +73,16 @@
 #     ]
 
 
+
+    
 #Memoria interna, usada para precargar los dialogos de la waifu
 define module_memory_db = {}
 
+init python:
+    from functions import  get_percache , set_percache
 
 # Llama al menú de opciones
 label intro:
-    
     scene bg OFICINA_CENTRAL  with dissolve
     play music "music/loby.mp3" fadein 0.5 volume 0.75
     play sound "sfx/office.mp3" fadein 0.5 volume 0.45
@@ -87,9 +90,8 @@ label intro:
     recluter "[get_txt_db('intro', 1, extra={'dialogo': 1})]"
     
     $ name = renpy.input(get_txt_db('intro', 13, extra={'dialogo': 1}))
-    $ set_cache("player_name", name)
-    $ pl.name = "{color=#2786eb}[get_cache('player_name')]{/color}"
-    
+    $ set_percache("player_name","{color=#2786eb}"+name+"{/color}")
+    $ pl.name = get_percache("player_name")
     menu:
         "[get_txt_db('intro', 2, extra={'dialogo': 1})]"
         "[get_txt_db_fun('uscs', 'intro_menu', extra={'subindex': 1})]":    
@@ -97,7 +99,7 @@ label intro:
         "[get_txt_db_fun('uscs', 'intro_menu', extra={'subindex': 2})]":
             $ renpy.quit()
     recluter "[get_txt_db('intro', 3, extra={'dialogo': 1})]"
-    recluter "[get_txt_db('intro', 4, extra={'dialogo': 1})]"
+    recluter "[get_txt_db('intro', 4, extra={'dialogo': 1})]"   
     recluter "[get_txt_db('intro', 5, extra={'dialogo': 1})]"
     recluter "[get_txt_db('intro', 6, extra={'dialogo': 1})]"
     recluter "[get_txt_db('intro', 7, extra={'dialogo': 1})]"
@@ -106,7 +108,6 @@ label intro:
     recluter "[get_txt_db('intro', 10, extra={'dialogo': 1})]"
     recluter "[get_txt_db('intro', 11, extra={'dialogo': 1})]"
     recluter "[get_txt_db('intro', 12, extra={'dialogo': 1})]"
-    # recluter "[get_txt_db('intro', 11, extra={'dialogo': 1})]"
     scene bg OFICINA_NORMAL  with dissolve
     jump seleccionar_profile
 

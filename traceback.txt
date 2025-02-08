@@ -1,13 +1,22 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
+<<<<<<< HEAD
   File "game/KurumiTokisaki.rpy", line 29, in script
     "[get_txt_patchDB(db_aux_kurumitokisaki_dialogs, 1)]"
 IndexError: list index out of range
+=======
+  File "game/script.rpy", line 93, in script
+    $ set_percache("player_name", "player_name","{color=#2786eb}"+name+"{/color}")
+  File "game/script.rpy", line 93, in <module>
+    $ set_percache("player_name", "player_name","{color=#2786eb}"+name+"{/color}")
+TypeError: set_percache() takes 2 positional arguments but 3 were given
+>>>>>>> 7c8149ba50f32f02ab7e61bede9ab40ed07d3fa3
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
+<<<<<<< HEAD
   File "game/KurumiTokisaki.rpy", line 29, in script
     "[get_txt_patchDB(db_aux_kurumitokisaki_dialogs, 1)]"
   File "D:\Python\renpy-8.3.4-sdk\renpy-8.3.4-sdk\renpy\ast.py", line 2579, in execute
@@ -35,8 +44,23 @@ Full traceback:
   File "<none>", line 1, in <module>
   File "patch_essencials.py", line 10, in get_txt_patchDB
 IndexError: list index out of range
+=======
+  File "game/script.rpy", line 93, in script
+    $ set_percache("player_name", "player_name","{color=#2786eb}"+name+"{/color}")
+  File "D:\Python\renpy-8.3.4-sdk\renpy-8.3.4-sdk\renpy\ast.py", line 827, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+  File "D:\Python\renpy-8.3.4-sdk\renpy-8.3.4-sdk\renpy\python.py", line 1178, in py_exec_bytecode
+    exec(bytecode, globals, locals)
+  File "game/script.rpy", line 93, in <module>
+    $ set_percache("player_name", "player_name","{color=#2786eb}"+name+"{/color}")
+TypeError: set_percache() takes 2 positional arguments but 3 were given
+>>>>>>> 7c8149ba50f32f02ab7e61bede9ab40ed07d3fa3
 
 Windows-10-10.0.22621 AMD64
 Ren'Py 8.3.4.24120703
  
+<<<<<<< HEAD
 Fri Feb  7 19:33:39 2025
+=======
+Fri Feb  7 22:04:54 2025
+>>>>>>> 7c8149ba50f32f02ab7e61bede9ab40ed07d3fa3

@@ -1,5 +1,7 @@
 import renpy.exports as renpy
 from profiles import profiles
+
+
 cache = {
 
 }
@@ -9,6 +11,9 @@ def see_module(module):
     for i in module.__dict__:
         print(i)
 
+# def save_persisnt(gid):
+#     if not renpy.persistent.girls_finished:
+#         renpy.register_persistent("girls_finished", [])
 
 def get_cache(key):
     try:
@@ -62,3 +67,25 @@ def set_lang(lang):
     renpy.save_persistent()
     renpy.reload_script()
     # renpy.game.persistent.disclaimed = False 
+
+# def cargar_persistente():
+#     # renpy.game.persistent.puta = "madre"
+#     # renpy.save_persistent()
+#     print(renpy.game.persistent.cache)
+#     return ""
+
+# AGREGA PERSISTENCIA DE DATOS 
+def set_percache(key, value):
+    if not renpy.game.persistent.cache:
+        renpy.game.persistent.cache = {}
+    cache_per = renpy.game.persistent.cache
+    cache_per[key] = value
+    renpy.game.persistent.cache = cache_per
+    renpy.save_persistent()
+
+def get_percache(key):
+    if not renpy.game.persistent.cache:
+        return None
+    return renpy.game.persistent.cache.get(key)
+
+# AGREGA PERSISTENCIA DE DATOS 
