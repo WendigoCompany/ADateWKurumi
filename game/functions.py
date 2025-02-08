@@ -122,6 +122,8 @@ def crear_archivo(nombre_archivo, contenido):
 # # print("---------------------------------------------------------------------------")
 # print(inspect.getsource(renpy))
 
-see_module(renpy)
+# see_module(renpy.list_saved_games())
+
+# print(renpy.config.developer)
 
 
