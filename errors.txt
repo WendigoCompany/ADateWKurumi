@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 91: invalid syntax
-    pl.name = "{color=#2786eb}[get_cache("player_name")]{/color}"
-                                           ^
+File "game/script.rpy", line 75: python block expects a non-empty block.
+    init python:
+                ^
 
 Ren'Py Version: Ren'Py 8.3.4.24120703
-Fri Feb  7 19:30:39 2025
+Fri Feb  7 21:55:00 2025
